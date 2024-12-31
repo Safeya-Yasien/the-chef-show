@@ -3,9 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About" },
-  { to: "/experience", label: "Experience" },
-  { to: "/menu", label: "Menu" },
+  { to: "#about", label: "About" },
+  { to: "#experience", label: "Experience" },
+  { to: "#menu", label: "Menu" },
   { to: "/reservation", label: "Reservation" },
 ];
 
@@ -38,7 +38,7 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="border-b-[0.5px] border-b-[#FFFFFF80] bg-[#232323] backdrop-blur-[40px] h-[88px]">
+    <header className="border-b-[0.5px] border-b-[#FFFFFF80] bg-[#232323] h-[88px]">
       <nav className="w-full h-full z-20 top-0 start-0 px-4 xl:px-[60px]">
         <div className="flex flex-wrap items-center justify-between mx-auto px-4 h-full">
           {/* logo */}
@@ -94,7 +94,7 @@ export function Navbar() {
             id="navbar-sticky"
           >
             {/* links */}
-            <ul className="flex flex-col xl:flex-row gap-4 absolute top-[88px] xl:top-auto left-0 xl:left-auto p-6 xl:p-0 bg-black xl:relative xl:gap-[64px] items-center w-full xl:w-auto xl:h-full">
+            <ul className="flex flex-col xl:flex-row gap-4 absolute top-[88px] xl:top-auto left-0 xl:left-auto p-6 xl:p-0 bg-[#232323] xl:relative xl:gap-[64px] items-center w-full xl:w-auto xl:h-full">
               {navLinks.map((link) => (
                 <li key={link.to} className="w-full xl:w-auto h-full">
                   <NavLink to={link.to}>{link.label}</NavLink>
