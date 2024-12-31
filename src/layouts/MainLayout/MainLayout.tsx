@@ -1,12 +1,15 @@
-import { Navbar } from "@/components/shared"
+import { Navbar, Footer } from "@/components/shared";
+import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
+  console.log("MainLayout rendered");
+
   return (
     <div className="font-jakarta h-screen overflow-x-hidden">
-      <Navbar/>
-      
+      <Navbar />
+      <Outlet />
+      <Footer/>
     </div>
-  )
-}
-export default MainLayout
-
+  );
+};
+export default MainLayout;
