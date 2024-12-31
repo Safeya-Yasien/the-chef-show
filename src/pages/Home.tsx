@@ -1,6 +1,12 @@
+import { Hero } from "@/components";
+
 const Home = () => {
+  console.log("Home rendered");
   return (
-    <div>Home</div>
-  )
-}
-export default Home
+    <div className="h-screen ">
+      {/* hero section */}
+      <Hero />
+    </div>
+  );
+};
+export default Home;
