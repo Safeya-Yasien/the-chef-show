@@ -3,11 +3,15 @@ import hero from "../../assets/images/hero.jpg";
 const Hero = () => {
   return (
     <div
-      className="bg-no-repeat bg-cover bg-center rounded-br-[120px] rounded-bl-[120px] h-screen"
+      className="bg-no-repeat bg-cover bg-center rounded-br-[120px] rounded-bl-[120px] h-screen
+      flex flex-col items-center justify-center relative"
       style={{ backgroundImage: `url(${hero})` }}
     >
-      <div>
-        <h1 className="text-white font-normal font-restora text-[72px] leading-[0.02em] text-center">
+      {/* overlay */}
+
+      <div className="absolute w-full h-full top-0 left-0 bg-[#000000BF] "></div>
+      <div className="flex flex-col items-center justify-center gap-[40px] w-[700px] relative">
+        <h1 className="text-white font-normal font-restora text-[72px] uppercase text-center">
           delicious food eating experience
         </h1>
         <p className="text-white leading-[0.04em] text-[20px] font-normal ">
