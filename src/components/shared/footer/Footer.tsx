@@ -5,7 +5,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="rounded-tr-[140px] rounded-tl-[140px] border-t-[1px] border-t-[#C19F74] bg-black p-[80px] pb-[140px]">
+    <footer className="rounded-tr-[140px] rounded-tl-[140px] border-t-[1px] border-t-[#C19F74] bg-black p-[80px] pb-[140px]">
       <div className="flex gap-[80px]">
         {/* first columns */}
         <div className="flex flex-col gap-8">
@@ -52,7 +52,7 @@ const Footer = () => {
           timeless elegance.
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 export default Footer;
