@@ -5,12 +5,12 @@ import { CustomTitle } from "../shared";
 const Hero = () => {
   return (
     <div
-      className="bg-no-repeat bg-cover bg-center rounded-br-[120px] rounded-bl-[120px] h-screen
+      className="bg-no-repeat bg-cover bg-center rounded-br-[120px] rounded-bl-[120px]  h-screen
       flex flex-col items-center justify-center relative"
       style={{ backgroundImage: `url(${hero})` }}
     >
       {/* overlay */}
-      <div className="absolute w-full h-full top-0 left-0 bg-[#000000BF] "></div>
+      <div className="absolute w-full h-full top-0 left-0 bg-[#000000BF] rounded-br-[120px] rounded-bl-[120px] border-b-[1px] border-b-[#C19F74]"></div>
 
       {/* text */}
       <div className="flex flex-col items-center justify-center gap-[30px] w-[800px] relative">
