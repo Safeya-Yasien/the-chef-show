@@ -21,7 +21,7 @@ const About = () => {
       </div>
 
       {/*  */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-[48px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  gap-[48px]">
         <div className="h-[714px] flex flex-col gap-[20px]">
           <div className="w-[438px] h-[518px]">
             <img
