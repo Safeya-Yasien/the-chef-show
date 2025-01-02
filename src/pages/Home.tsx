@@ -1,11 +1,25 @@
-import { Hero } from "@/components";
+import {
+  About,
+  Experience,
+  Hero,
+  SpecialMenu,
+  Support,
+  Testimonials,
+} from "@/components";
 
 const Home = () => {
   return (
-    <div className="h-screen ">
+    <>
       {/* hero section */}
       <Hero />
-    </div>
+      <div className="px-[80px]">
+        <About />
+        <Experience />
+        <SpecialMenu />
+        <Testimonials />
+        <Support />
+      </div>
+    </>
   );
 };
 export default Home;
