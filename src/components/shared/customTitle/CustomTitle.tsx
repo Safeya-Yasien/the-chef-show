@@ -5,7 +5,7 @@ interface ICustomTitleProps {
 
 const CustomTitle = ({ imgSrc, title }: ICustomTitleProps) => {
   return (
-    <div className="flex flex-col items-center justify-center gap-5">
+    <div className="flex flex-col items-center justify-center gap-5 mb-[25px]">
       <img src={imgSrc} alt={title} loading="lazy" />
       <div className="relative">
         <p className="uppercase text-[#C19F74] font-medium text-sm">{title}</p>
