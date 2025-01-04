@@ -10,7 +10,7 @@ const About = () => {
       {/* custom title  */}
       <div className="flex flex-col items-center justify-center text-center mb-20">
         <CustomTitle title="All Day Experience" imgSrc={forkKnife} />
-        <h1 className="font-normal text-[56px] tracking-[0.02em] text-white font-restora">
+        <h1 className="font-normal text-[56px] tracking-[0.02em] text-white font-restora uppercase">
           About The chef show
         </h1>
         <p className="font-normal text-[16px] text-white w-[668px] capitalize">
