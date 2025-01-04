@@ -80,7 +80,7 @@ interface IProductCardProps {
 }
 
 const ProductCard = ({ imgSrc, title, description }: IProductCardProps) => (
-  <Link to='/' className="flex flex-col gap-[24px]">
+  <Link to="/" className="flex flex-col gap-[24px]">
     <div>
       <img src={imgSrc} alt={title} loading="lazy" className="h-full w-full" />
     </div>
