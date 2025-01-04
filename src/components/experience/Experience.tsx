@@ -5,19 +5,19 @@ import experience2 from "../../assets/images/experience2.jpg";
 
 const Experience = () => {
   return (
-    <section className="pt-[120px]">
+    <section className="pt-[120px]" id="experience">
       {/* custom title  */}
-      <div className="flex flex-col items-center justify-center text-center mb-20 w-[800px] mx-auto">
+      <div className="flex flex-col items-center justify-center text-center mb-10 md:mb-20 w-auto md:w-[800px] mx-auto">
         <CustomTitle title="Today Specials" imgSrc={champagnePartyAlcohol} />
-        <h1 className="font-normal text-[56px] tracking-[0.02em] text-white font-restora uppercase">
+        <h1 className="font-normal text-[30px] md:text-[40px] lg:text-[56px] tracking-[0.02em] text-white font-restora uppercase">
           The perfect place for an exceptional experience{" "}
         </h1>
       </div>
 
       {/*  */}
-      <div className="flex">
+      <div className="flex flex-col lg:flex-row">
         {/* imgs */}
-        <div className="flex gap-[32px] w-[850px] items-center">
+        <div className="flex flex-col md:flex-row gap-[32px] w-auto lg:w-[850px] items-center">
           <div className="flex items-center justify-center">
             <img
               src={experience2}

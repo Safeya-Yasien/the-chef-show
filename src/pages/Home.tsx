@@ -12,7 +12,7 @@ const Home = () => {
     <>
       {/* hero section */}
       <Hero />
-      <div className="px-[80px]">
+      <div className="px-[40px] md:px-[80px]">
         <About />
         <Experience />
         <SpecialMenu />

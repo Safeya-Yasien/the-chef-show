@@ -49,9 +49,9 @@ const products = [
 const SpecialMenu = () => {
   return (
     <section className="pt-[120px] ">
-      <div className="flex flex-col items-center justify-center text-center mb-20 w-[800px] mx-auto">
+      <div className="flex flex-col items-center justify-center text-center mb-20 w-auto md:w-[800px] mx-auto">
         <CustomTitle title="Special Offers" imgSrc={servingDome} />
-        <h1 className="font-normal text-[56px] tracking-[0.02em] text-white font-restora uppercase">
+        <h1 className="font-normal text-[40px] md:text-[56px] tracking-[0.02em] text-white font-restora uppercase">
           THE special menu
         </h1>
       </div>

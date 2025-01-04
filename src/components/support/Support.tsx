@@ -5,15 +5,15 @@ import support from "../../assets/images/support.jpg";
 const Support = () => {
   return (
     <section className="pt-[120px]  ">
-      <div className="flex ">
-        <div className="w-[625px] ">
+      <div className="flex flex-col md:flex-row gap-8">
+        <div className="w-auto md:w-[325px] lg:w-[625px]">
           {/* custom title  */}
           <div className="flex flex-col items-center justify-center text-center mb-8">
             <CustomTitle
               title="HELP & SUPPORT"
               imgSrc={foodTakeawayPackaging}
             />
-            <h1 className="font-normal text-[56px] tracking-[0.02em] text-white font-restora uppercase w-[625px]">
+            <h1 className="font-normal text-[30px] md:text-[40px] lg:text-[56px] tracking-[0.02em] text-white font-restora uppercase w-auto md:w-[325px] lg:w-[625px]">
               NEED SUPPORT? WE’RE HERE TO HELP{" "}
             </h1>
           </div>
@@ -34,12 +34,12 @@ const Support = () => {
         </div>
 
         <div className="flex justify-center flex-1">
-          <div className="w-[625px] h-[448px]">
+          <div className="w-auto h-auto md:h-[448px]">
             <img
               src={support}
               alt=""
               loading="lazy"
-              className="object-cover w-full h-full"
+              className="object-contain w-full h-full"
             />
           </div>
         </div>

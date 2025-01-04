@@ -6,14 +6,14 @@ import image2 from "../../assets/images/aboutImages/image2.jpg";
 
 const About = () => {
   return (
-    <section className="pt-[120px]">
+    <section className="pt-[120px]" id="contact">
       {/* custom title  */}
       <div className="flex flex-col items-center justify-center text-center mb-20">
         <CustomTitle title="All Day Experience" imgSrc={forkKnife} />
-        <h1 className="font-normal text-[56px] tracking-[0.02em] text-white font-restora uppercase">
+        <h1 className="font-normal text-[40px] md:text-[56px] tracking-[0.02em] text-white font-restora uppercase">
           About The chef show
         </h1>
-        <p className="font-normal text-[16px] text-white w-[668px] capitalize">
+        <p className="font-normal text-[16px] text-white w-auto md:w-[668px] capitalize">
           Our restaurant offers a stylish and fun European cafe-restaurant
           experience, inspired by Executive Cheft Chris Hill, the all day
           dinning menu is a reflection of the very best of the season.
@@ -21,9 +21,9 @@ const About = () => {
       </div>
 
       {/*  */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  gap-[48px]">
-        <div className="h-[714px] flex flex-col gap-[20px]">
-          <div className="w-[438px] h-[518px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-[48px]">
+        <div className="h-auto md:h-[714px] flex flex-col gap-[20px]">
+          <div className="w-auto md:w-[438px] h-[518px]">
             <img
               src={image}
               alt=""
@@ -45,7 +45,7 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="h-[714px] flex flex-col gap-[20px] items-center justify-center">
+        <div className="h-auto md:h-[714px] flex flex-col gap-[20px]">
           <div className=" justify-center items-center">
             <img
               src={image1}
@@ -68,9 +68,9 @@ const About = () => {
             </p>
           </div>
         </div>
-        <div className="h-[714px] flex flex-col gap-[20px]">
-          <div className="w-[438px] h-[518px]">
-            <img
+        <div className="h-auto md:h-[714px] flex flex-col gap-[20px]">
+        <div className="w-auto md:w-[438px] h-[518px]">
+        <img
               src={image2}
               alt=""
               loading="lazy"
