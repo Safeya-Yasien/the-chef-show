@@ -12,7 +12,7 @@ const Contact = () => {
   return (
     <section className="relative px-[80px] ">
       {/* hero */}
-      <div className="rounded-br-[120px] rounded-bl-[120px] border border-[#C19F74] flex items-center justify-center h-[420px] text-center">
+      <div className="rounded-br-[120px] rounded-bl-[120px] border border-[#C19F74] flex flex-col items-center justify-center h-[420px] text-center">
         <h1 className="uppercase font-restora text-white font-normal text-[56px] tracking-[0.02em] ">
           Contact us
         </h1>
@@ -44,7 +44,7 @@ const Contact = () => {
       {/* form */}
       <div className="grid grid-cols-1 md:grid-cols-2 border border-[#C19F74] mt-[80px]">
         <div className="py-[64px] px-[40px]">
-          <h2 className="font-restora text-white font-normal text-[48px] tracking-[0.02em] capitalize">
+          <h2 className="font-restora text-white font-normal text-[48px] tracking-[0.02em] capitalize mb-[24px]">
             Contact us
           </h2>
           <p className="text-white font-thin text-[20px] leading-[32px] mb-10">
@@ -86,6 +86,8 @@ const Contact = () => {
                 placeholder="Enter Your Message"
               />
             </div>
+
+            <button className="bg-[#C19F74] text-white w-auto md:w-[256px] h-[52px] flex items-center justify-center uppercase font-medium text-sm tracking-[0.04em] mt-[32px] ">send a message</button>
           </form>
         </div>
 
