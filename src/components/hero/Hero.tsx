@@ -32,7 +32,7 @@ const Hero = () => {
       <div className="absolute w-full h-full top-0 left-0 bg-[#000000BF] rounded-br-[120px] rounded-bl-[120px] border-b-[1px] border-b-[#C19F74]"></div>
 
       {/* text */}
-      <div className="flex flex-col items-center justify-center gap-[15px] w-auto md:w-[800px] relative">
+      <div className="flex flex-col items-center justify-center gap-[15px] text-center  w-auto md:w-[800px] relative">
         <CustomTitle
           title={"welcome to THE CHEF SHOW"}
           imgSrc={barbecueSteak}

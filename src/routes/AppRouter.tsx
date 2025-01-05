@@ -1,3 +1,4 @@
+import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
 import Home from "@/pages/Home";
 import Reservation from "@/pages/Reservation";
@@ -19,6 +20,10 @@ const router = createBrowserRouter(
         {
           path: "reservation",
           element: <Reservation />,
+        },
+        {
+          path: "contact",
+          element: <Contact />,
         },
       ],
     },
