@@ -1,4 +1,5 @@
 import contact from "../assets/images/contact.jpg";
+import group from "../assets/images/group.png";
 
 import {
   Breadcrumb,
@@ -10,39 +11,45 @@ import {
 
 const Contact = () => {
   return (
-    <section className="relative px-[80px] ">
+    <div className="relative  ">
       {/* hero */}
-      <div className="rounded-br-[120px] rounded-bl-[120px] border border-[#C19F74] flex flex-col items-center justify-center h-[420px] text-center">
-        <h1 className="uppercase font-restora text-white font-normal text-[56px] tracking-[0.02em] ">
-          Contact us
-        </h1>
+      <div
+        className="rounded-br-[120px] rounded-bl-[120px] border-b border-[#C19F74] flex flex-col items-center justify-center h-[420px] text-center 
+   bg-no-repeat bg-center"
+        style={{ backgroundImage: `url(${group})` }}
+      >
+        <div className="relative ">
+          <h1 className="uppercase font-restora text-white font-normal text-[56px] tracking-[0.02em] ">
+            Contact us
+          </h1>
 
-        <Breadcrumb className="">
-          <BreadcrumbList className="text-center justify-center uppercase">
-            <BreadcrumbItem>
-              <BreadcrumbLink
-                href="/"
-                className="text-white font-normal text-[16px] "
-              >
-                Home
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator className="text-white" />
+          <Breadcrumb className="">
+            <BreadcrumbList className="text-center justify-center uppercase">
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  href="/"
+                  className="text-white font-normal text-[16px] hover:text-white"
+                >
+                  Home
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator className="text-white " />
 
-            <BreadcrumbItem>
-              <BreadcrumbLink
-                href="/docs/components"
-                className="text-[#C19F74] font-normal text-[16px] "
-              >
-                contactus
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+              <BreadcrumbItem>
+                <BreadcrumbLink
+                  href="/docs/components"
+                  className="text-[#C19F74] font-normal text-[16px] hover:text-[#C19F74] "
+                >
+                  contactus
+                </BreadcrumbLink>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
+        </div>
       </div>
 
       {/* form */}
-      <div className="grid grid-cols-1 md:grid-cols-2 border border-[#C19F74] mt-[80px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 border border-[#C19F74] mt-[80px] px-[80px]">
         <div className="py-[64px] px-[40px]">
           <h2 className="font-restora text-white font-normal text-[48px] tracking-[0.02em] capitalize mb-[24px]">
             Contact us
@@ -87,7 +94,9 @@ const Contact = () => {
               />
             </div>
 
-            <button className="bg-[#C19F74] text-white w-auto md:w-[256px] h-[52px] flex items-center justify-center uppercase font-medium text-sm tracking-[0.04em] mt-[32px] ">send a message</button>
+            <button className="bg-[#C19F74] text-white w-auto md:w-[256px] h-[52px] flex items-center justify-center uppercase font-medium text-sm tracking-[0.04em] mt-[32px] ">
+              send a message
+            </button>
           </form>
         </div>
 
@@ -101,7 +110,7 @@ const Contact = () => {
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 export default Contact;
