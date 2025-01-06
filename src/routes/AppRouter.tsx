@@ -23,7 +23,7 @@ const router = createBrowserRouter(
           element: <Reservation />,
         },
         {
-          path: "contact",
+          path: "contactus",
           element: <Contact />,
         },
       ],

@@ -6,7 +6,7 @@ const navLinks = [
   { to: "#about", label: "About" },
   { to: "#experience", label: "Experience" },
   { to: "/reservation", label: "Reservation" },
-  { to: "/contact", label: "Contact" },
+  { to: "/contactus", label: "Contact" },
 ];
 
 interface INavLinkProps {
