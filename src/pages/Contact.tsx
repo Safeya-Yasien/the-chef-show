@@ -49,7 +49,8 @@ const Contact = () => {
       </div>
 
       {/* form */}
-      <div className="grid grid-cols-1 md:grid-cols-2 border border-[#C19F74] mt-[80px] px-[80px]">
+      <div className="px-[80px] ">
+      <div className="grid grid-cols-1 md:grid-cols-2 border border-[#C19F74] mt-[80px] ">
         <div className="py-[64px] px-[40px]">
           <h2 className="font-restora text-white font-normal text-[48px] tracking-[0.02em] capitalize mb-[24px]">
             Contact us
@@ -108,7 +109,7 @@ const Contact = () => {
             loading="lazy"
             className="h-full w-full "
           />
-        </div>
+        </div></div>
       </div>
     </div>
   );
