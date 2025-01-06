@@ -1,6 +1,7 @@
 import { CustomTitle } from "../shared";
 import foodTakeawayPackaging from "../../assets/images/foodTakeawayPackaging.svg";
 import support from "../../assets/images/support.jpg";
+import { Link } from "react-router-dom";
 
 const Support = () => {
   return (
@@ -27,9 +28,12 @@ const Support = () => {
             <button className="bg-[#C19F74] text-white w-[150px] h-[50px] flex items-center justify-center shadow-[4px_4px_10px_0px_#00000014] text-sm font-medium tracking-[0.04em] leading-[14px] ">
               HELP CENTER
             </button>
-            <button className="border-[2px] border-[#C19F74] text-white w-[150px] h-[50px] flex items-center justify-center shadow-[4px_4px_10px_0px_#00000014] text-sm font-medium tracking-[0.04em] leading-[14px] ">
+            <Link
+              to="contactus"
+              className="border-[2px] border-[#C19F74] text-white w-[150px] h-[50px] flex items-center justify-center shadow-[4px_4px_10px_0px_#00000014] text-sm font-medium tracking-[0.04em] leading-[14px] "
+            >
               CONTACT US
-            </button>
+            </Link>
           </div>
         </div>
 

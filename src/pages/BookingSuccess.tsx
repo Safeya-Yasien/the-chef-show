@@ -42,7 +42,7 @@ const BookingSuccess = () => {
         <Link
           to="/"
           className="uppercase text-white bg-[#C19F74] flex items-center justify-center font-medium text-sm tracking-[0.04em]
-                    w-[241px] h-[52px] mt-[32px]"
+                    w-[241px] h-[52px] mt-[32px] outline-none"
         >
           back to home
         </Link>

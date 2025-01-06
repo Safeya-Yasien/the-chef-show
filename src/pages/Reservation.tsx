@@ -1,5 +1,6 @@
 import { SectionHeader } from "@/components";
 import group from "../assets/images/group.png";
+import { Link } from "react-router-dom";
 
 const Reservation = () => {
   return (
@@ -43,9 +44,12 @@ const Reservation = () => {
             {/* calendar  */}
           </div>
 
-          <button className="bg-[#C19F74] text-white w-auto md:w-[313px] h-[52px] flex items-center justify-center uppercase font-medium text-sm tracking-[0.04em] mt-[24px] mx-auto ">
+          <Link
+            to={"/reservation/booking-success"}
+            className="bg-[#C19F74] text-white w-auto md:w-[313px] h-[52px] flex items-center justify-center uppercase font-medium text-sm tracking-[0.04em] mt-[24px] mx-auto "
+          >
             complete reservation
-          </button>
+          </Link>
         </div>
 
         <div className="border border-[#C19F74] p-8">

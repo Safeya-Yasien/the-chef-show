@@ -32,7 +32,7 @@ const router = createBrowserRouter(
       element: <BasicLayout />,
       children: [
         {
-          path: "booking-success",
+          path: "reservation/booking-success",
           element: <BookingSuccess />,
         },
       ],
