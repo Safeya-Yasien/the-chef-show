@@ -5,6 +5,7 @@ import { CustomTitle } from "../shared";
 
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const bgImages = [hero, hero, hero];
@@ -32,7 +33,7 @@ const Hero = () => {
       <div className="absolute w-full h-full top-0 left-0 bg-[#000000BF] rounded-br-[120px] rounded-bl-[120px] border-b-[1px] border-b-[#C19F74]"></div>
 
       {/* text */}
-      <div className="flex flex-col items-center justify-center gap-[15px] text-center  w-auto md:w-[800px] relative">
+      <div className="flex flex-col items-center justify-center gap-[15px] text-center  w-auto md:w-[800px] relative z-10">
         <CustomTitle
           title={"welcome to THE CHEF SHOW"}
           imgSrc={barbecueSteak}
@@ -43,9 +44,9 @@ const Hero = () => {
         <p className="text-white tracking-[0.04em] leading-[20px] text-[20px] font-normal mb-[20px]">
           we serve food, Harmony, & Laughter Since 1991
         </p>
-        <button className="text-white border-[2px] border-[#C19F74] uppercase text-sm font-medium leading-[14px] tracking-[0.04em] w-[150px] h-[50px] flex items-center justify-center">
+        <Link to='reservation' className="text-white border-[2px] border-[#C19F74] uppercase text-sm font-medium leading-[14px] tracking-[0.04em] w-[150px] h-[50px] flex items-center justify-center">
           RESERVATION
-        </button>
+        </Link>
       </div>
 
       {/* Navigation Arrows */}
