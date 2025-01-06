@@ -1,3 +1,5 @@
+import BasicLayout from "@/layouts/BasicLayout";
+import BookingSuccess from "@/pages/BookingSuccess";
 import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
 import Home from "@/pages/Home";
@@ -16,7 +18,6 @@ const router = createBrowserRouter(
           index: true,
           element: <Home />,
         },
-
         {
           path: "reservation",
           element: <Reservation />,
@@ -24,6 +25,15 @@ const router = createBrowserRouter(
         {
           path: "contact",
           element: <Contact />,
+        },
+      ],
+    },
+    {
+      element: <BasicLayout />,
+      children: [
+        {
+          path: "booking-success",
+          element: <BookingSuccess />,
         },
       ],
     },
