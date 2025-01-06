@@ -6,17 +6,17 @@
 
 @font-face {
   font-family: "Restora";
-  src: url("./assets/fonts/Restora.woff") format("woff"),
-    url("./assets/fonts/Restora.woff2") format("woff2");
-  font-weight: normal;
+  src: url("./assets/fonts/RestoraExtraLight.woff") format("woff"),
+    url("./assets/fonts/RestoraExtraLight.woff2") format("woff2");
+  font-weight: 200;
   font-style: normal;
 }
 @font-face {
   font-family: "Restora";
-  src: url("./assets/fonts/RestoraBold.woff") format("woff"),
-    url("./assets/fonts/RestoraBold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
+  src: url("./assets/fonts/RestoraThinItalic.woff") format("woff"),
+    url("./assets/fonts/RestoraThinItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
 }
 @layer base {
   :root {
