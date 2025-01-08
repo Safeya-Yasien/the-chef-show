@@ -22,6 +22,7 @@ const NavLink: React.FC<INavLinkProps> = ({ to, children, closeMenu }) => {
       to={to}
       onClick={closeMenu}
       className={`uppercase text-white font-normal text-xl transition-colors h-full flex items-center relative group`}
+      aria-label={`Navigate to ${children}`}
     >
       {children}
       {/* Hover and active border with rounded corners */}
@@ -49,6 +50,7 @@ export function Navbar() {
           <Link
             to="/"
             className="flex items-center space-x-3 rtl:space-x-reverse w-[185px] h-[53px]"
+            aria-label="Go to the Chef Show homepage"
           >
             <img
               src="/chefShow.svg"
@@ -61,6 +63,7 @@ export function Navbar() {
             <Link
               to="/reservation"
               className="text-white bg-[#C19F74] w-[150px] h-[50px] shadow-[4px_4px_10px_0px_#00000014] text-sm font-medium leading-[0.04em]  items-center justify-center hover:bg-[#A88A62] transition-colors hidden sm:flex"
+              aria-label="Go to the reservation page"
             >
               RESERVATION
             </Link>

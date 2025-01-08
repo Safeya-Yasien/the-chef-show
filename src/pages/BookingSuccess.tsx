@@ -43,6 +43,7 @@ const BookingSuccess = () => {
           to="/"
           className="uppercase text-white bg-[#C19F74] flex items-center justify-center font-medium text-sm tracking-[0.04em]
                     w-[241px] h-[52px] mt-[32px] outline-none"
+          aria-label="Back to the home page"
         >
           back to home
         </Link>

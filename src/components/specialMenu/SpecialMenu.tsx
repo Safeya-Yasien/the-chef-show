@@ -80,14 +80,18 @@ interface IProductCardProps {
 }
 
 const ProductCard = ({ imgSrc, title, description }: IProductCardProps) => (
-  <Link to="/" className="flex flex-col gap-[24px]">
+  <Link
+    to="/"
+    className="flex flex-col gap-[24px]"
+    aria-label={`View details of ${title}`}
+  >
     <div>
       <img src={imgSrc} alt={title} loading="lazy" className="h-full w-full" />
     </div>
     <div className="flex flex-col text-center gap-[20px]">
-      <h4 className="text-white font-normal text-[32px] font-restora capitalize leading-[32px]">
+      <h2 className="text-white font-normal text-[32px] font-restora capitalize leading-[32px]">
         {title}
-      </h4>
+      </h2>
       <p className="text-[#8B8B8B] font-normal text-[16px] leading-[24px] capitalize line-clamp-2 ">
         {description}
       </p>

@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="flex flex-col md:flex-row gap-[80px]">
         {/* first columns */}
         <div className="flex flex-col gap-8">
-          <Link to="/">
+          <Link to="/" aria-label="Go to the Chef Show homepage">
             <img src="/chefShow.svg" alt="Chef Show" />
           </Link>
           <p className="text-[#8B8B8B] font-normal text-xs w-auto md:w-[380px]">
@@ -23,6 +23,7 @@ const Footer = () => {
               <Link
                 to="/ "
                 className="border-[1px] border-[#8B8B8B] flex items-center justify-center w-[64px] h-[64px] rounded-full"
+                aria-label="Go to the Chef Show homepage"
               >
                 <FaFacebookF className="w-[22px] h-[22px]" color="#8B8B8B" />
               </Link>
@@ -31,6 +32,7 @@ const Footer = () => {
               <Link
                 to="/ "
                 className="border-[1px] border-[#8B8B8B] flex items-center justify-center w-[64px] h-[64px] rounded-full"
+                aria-label="Go to the Chef Show homepage"
               >
                 <FaInstagram className="w-[22px] h-[22px]" color="#8B8B8B" />
               </Link>
@@ -39,6 +41,7 @@ const Footer = () => {
               <Link
                 to="/ "
                 className="border-[1px] border-[#8B8B8B] flex items-center justify-center w-[64px] h-[64px] rounded-full"
+                aria-label="Go to the Chef Show homepage"
               >
                 <CiMail className="w-[22px] h-[22px]" color="#8B8B8B" />
               </Link>

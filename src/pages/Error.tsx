@@ -11,7 +11,7 @@ const Error = () => {
         <p className="text-gray-600 mt-2">
           The page you're looking for doesn't exist or an error occurred.
         </p>
-        <Link to="/">
+        <Link to="/" aria-label="Back to the home page">
           <button className="mt-6 px-6 py-2 text-white bg-blue-600 hover:bg-blue-500 rounded-md text-lg font-medium transition-colors">
             Back to Home
           </button>

@@ -48,6 +48,7 @@ const Reservation = () => {
           <Link
             to={"/reservation/booking-success"}
             className="bg-[#C19F74] text-white w-auto md:w-[313px] h-[52px] flex items-center justify-center uppercase font-medium text-sm tracking-[0.04em] mt-[24px] mx-auto "
+            aria-label="Complete your reservation and proceed to the booking success page"
           >
             complete reservation
           </Link>

@@ -31,7 +31,7 @@ const Support = () => {
             <Link
               to="contactus"
               className="border-[2px] border-[#C19F74] text-white w-[150px] h-[50px] flex items-center justify-center shadow-[4px_4px_10px_0px_#00000014] text-sm font-medium tracking-[0.04em] leading-[14px] "
-            >
+              aria-label="Go to the contact us page">
               CONTACT US
             </Link>
           </div>

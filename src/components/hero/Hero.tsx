@@ -47,6 +47,7 @@ const Hero = () => {
         <Link
           to="reservation"
           className="text-white border-[2px] border-[#C19F74] uppercase text-sm font-medium leading-[14px] tracking-[0.04em] w-[150px] h-[50px] flex items-center justify-center"
+          aria-label="Go to the reservation page"
         >
           RESERVATION
         </Link>
