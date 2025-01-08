@@ -12,7 +12,7 @@ const Reservation = () => {
         backgroundImage={group}
       />
 
-      <section className="grid grid-cols-12 gap-8 p-[80px] relative  min-h-screen">
+      <section className="grid grid-cols-12 gap-8 p-[20px] md:p-[80px] relative  min-h-screen">
         {/* calendar */}
         <div className="col-span-12 md:col-span-7">
           <div className="border border-[#C19F74] p-8 ">

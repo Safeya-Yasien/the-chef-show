@@ -24,7 +24,7 @@ const SectionHeader = ({
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="relative ">
-        <h1 className="uppercase font-restora text-white font-normal text-[56px] tracking-[0.02em] ">
+        <h1 className="uppercase font-restora text-white font-normal text-[35px] md:text-[56px] tracking-[0.02em] ">
           {title}
         </h1>
 

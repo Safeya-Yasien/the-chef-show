@@ -38,7 +38,7 @@ const Hero = () => {
           title={"welcome to THE CHEF SHOW"}
           imgSrc={barbecueSteak}
         />
-        <h1 className="text-white font-normal font-restora text-[40px] md:text-[72px] uppercase text-center leading-tight tracking-[0.02em]">
+        <h1 className="text-white font-normal font-restora text-[30px] md:text-[72px] uppercase text-center leading-tight tracking-[0.02em]">
           delicious food eating experience
         </h1>
         <p className="text-white tracking-[0.04em] leading-[20px] text-[20px] font-normal mb-[20px]">
