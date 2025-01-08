@@ -36,8 +36,7 @@ export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    // <header className="border-b-[0.5px] border-b-[#FFFFFF80] bg-[#232323] h-[88px]">
-    <header className="border-b-[0.5px] border-b-[#FFFFFF80] bg-transparent fixed w-full top-0 left-0 z-50 h-[88px] ">
+    <header className="border-b-[0.5px] border-b-[#FFFFFF80] bg-transparent fixed w-full top-0 left-0 z-50 h-[88px] bg-black backdrop-blur-2xl">
       <nav className="w-full h-full z-20 top-0 start-0 px-4 xl:px-[60px]">
         <div className="flex flex-wrap items-center justify-between mx-auto px-4 h-full">
           {/* logo */}

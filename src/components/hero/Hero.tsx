@@ -44,7 +44,10 @@ const Hero = () => {
         <p className="text-white tracking-[0.04em] leading-[20px] text-[20px] font-normal mb-[20px]">
           we serve food, Harmony, & Laughter Since 1991
         </p>
-        <Link to='reservation' className="text-white border-[2px] border-[#C19F74] uppercase text-sm font-medium leading-[14px] tracking-[0.04em] w-[150px] h-[50px] flex items-center justify-center">
+        <Link
+          to="reservation"
+          className="text-white border-[2px] border-[#C19F74] uppercase text-sm font-medium leading-[14px] tracking-[0.04em] w-[150px] h-[50px] flex items-center justify-center"
+        >
           RESERVATION
         </Link>
       </div>
