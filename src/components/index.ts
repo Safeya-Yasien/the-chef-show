@@ -5,6 +5,15 @@ import SpecialMenu from "./specialMenu/SpecialMenu";
 import Testimonials from "./testimonials/Testimonials";
 import Support from "./support/Support";
 import SectionHeader from "./sectionHeader/SectionHeader";
+import BookingCalendar from "./bookingCalendar/BookingCalendar";
 
-
-export { Hero, About, Experience, SpecialMenu, Testimonials, Support,SectionHeader };
+export {
+  Hero,
+  About,
+  Experience,
+  SpecialMenu,
+  Testimonials,
+  Support,
+  SectionHeader,
+  BookingCalendar,
+};
