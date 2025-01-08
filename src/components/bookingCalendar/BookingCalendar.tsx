@@ -92,10 +92,10 @@ const BookingCalendar = () => {
           );
         })}
         <button
-          className="bg-[#C19F74] text-white uppercase font-restora flex items-center justify-center font-normal text-[24px] mt-5"
+          className="bg-[#C19F74] text-white uppercase font-restora flex items-center justify-center font-normal text-[24px] h-[153px]"
           onClick={handleShowMore}
         >
-          {showMore ? "Show Less" : "More"}
+          {showMore ? <GoArrowLeft className="" /> : "More"}
         </button>
       </div>
     </div>
