@@ -10,15 +10,17 @@ const navLinks = [
 interface INavLinkProps {
   to: string;
   children: React.ReactNode;
+  closeMenu: () => void;
 }
 
-const NavLink: React.FC<INavLinkProps> = ({ to, children }) => {
+const NavLink: React.FC<INavLinkProps> = ({ to, children, closeMenu }) => {
   const location = useLocation();
   const isActive = location.pathname === to;
 
   return (
     <Link
       to={to}
+      onClick={closeMenu}
       className={`uppercase text-white font-normal text-xl transition-colors h-full flex items-center relative group`}
     >
       {children}
@@ -34,6 +36,10 @@ const NavLink: React.FC<INavLinkProps> = ({ to, children }) => {
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className="border-b-[0.5px] border-b-[#FFFFFF80] bg-transparent fixed w-full top-0 left-0 z-50 h-[88px] bg-black backdrop-blur-2xl">
@@ -95,7 +101,9 @@ export function Navbar() {
             <ul className="flex flex-col xl:flex-row gap-4 absolute top-[88px] xl:top-auto left-0 xl:left-auto p-6 xl:p-0 bg-[#232323] xl:bg-transparent xl:relative xl:gap-[64px] items-center w-full xl:w-auto xl:h-full">
               {navLinks.map((link) => (
                 <li key={link.to} className="w-full xl:w-auto h-full">
-                  <NavLink to={link.to}>{link.label}</NavLink>
+                  <NavLink to={link.to} closeMenu={closeMenu}>
+                    {link.label}
+                  </NavLink>
                 </li>
               ))}
             </ul>
