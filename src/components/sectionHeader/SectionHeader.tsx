@@ -19,7 +19,7 @@ const SectionHeader = ({
 }: ISectionHeaderProps) => {
   return (
     <div
-      className="rounded-br-[120px] rounded-bl-[120px] border-b border-[#C19F74] flex flex-col items-center justify-center h-[420px] text-center 
+      className="hero-section rounded-br-[120px] rounded-bl-[120px] border-b border-[#C19F74] flex flex-col items-center justify-center h-[420px] text-center 
               bg-no-repeat bg-center"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >

@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const navLinks = [
   { to: "/", label: "Home" },
   { to: "/reservation", label: "Reservation" },
+  { to: "/past-shows", label: "Past Shows" },
   { to: "/contactus", label: "Contact" },
 ];
 
@@ -42,8 +43,30 @@ export function Navbar() {
     setIsMenuOpen(false);
   };
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.querySelector(".hero-section");
+      if (!heroSection) return;
+
+      const heroBottom = heroSection.getBoundingClientRect().bottom;
+      setIsScrolled(heroBottom <= 88);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="border-b-[0.5px] border-b-[#FFFFFF80] bg-transparent fixed w-full top-0 left-0 z-50 h-[88px] bg-black backdrop-blur-2xl">
+    <header
+      className={`border-b-[0.5px] border-b-[#FFFFFF80]  fixed w-full top-0 left-0 z-50 h-[88px] 
+    transition-all duration-300 ${
+      isScrolled ? "backdrop-blur-2xl" : "bg-transparent"
+    } `}
+    >
       <nav className="w-full h-full z-20 top-0 start-0 px-4 xl:px-[60px]">
         <div className="flex flex-wrap items-center justify-between mx-auto px-4 h-full">
           {/* logo */}

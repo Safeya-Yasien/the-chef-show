@@ -3,6 +3,7 @@ import BookingSuccess from "@/pages/BookingSuccess";
 import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
 import Home from "@/pages/Home";
+import PastShows from "@/pages/PastShows";
 import Reservation from "@/pages/Reservation";
 import MainLayout from "@layouts/MainLayout/MainLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -25,6 +26,10 @@ const router = createBrowserRouter(
         {
           path: "contactus",
           element: <Contact />,
+        },
+        {
+          path: "past-shows",
+          element: <PastShows />,
         },
       ],
     },
