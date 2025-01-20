@@ -38,26 +38,32 @@ const NavLink: React.FC<INavLinkProps> = ({ to, children, closeMenu }) => {
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
 
-  const [isScrolled, setIsScrolled] = useState(false);
+  const handleScroll = () => {
+    const heroSection = document.querySelector(".hero-section");
+
+    if (heroSection) {
+      const heroHeight = (heroSection as HTMLElement).offsetHeight;
+
+      if (window.scrollY > heroHeight) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+  };
 
   useEffect(() => {
-    const handleScroll = () => {
-      const heroSection = document.querySelector(".hero-section");
-      if (!heroSection) return;
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-      const heroBottom = heroSection.getBoundingClientRect().bottom;
-      setIsScrolled(heroBottom <= 88);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-
-    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
