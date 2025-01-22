@@ -9,10 +9,11 @@ const Experience = () => {
       <div className="container px-4 mx-auto">
         {/* custom title  */}
         <div className="flex flex-col items-center justify-center text-center mb-10 md:mb-20 gap-3">
-          <CustomTitle title="Today Specials" imgSrc={champagnePartyAlcohol} />
-          <h1 className="font-normal text-[28px] md:text-[36px] lg:text-[48px] leading-7 md:leading-10 lg:leading-[56px] text-white font-restora uppercase">
-            The perfect place for an exceptional experience{" "}
-          </h1>
+          <CustomTitle
+            subTitle="Today Specials"
+            imgSrc={champagnePartyAlcohol}
+            mainTitle={"The perfect place for an exceptional experience"}
+          />
         </div>
 
         {/*  */}

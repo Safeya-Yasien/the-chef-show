@@ -10,10 +10,8 @@ const About = () => {
       <div className="container px-4 mx-auto">
         {/* custom title  */}
         <div className="flex flex-col items-center justify-center text-center mb-20 gap-3">
-          <CustomTitle title="All Day Experience" imgSrc={forkKnife} />
-          <h1 className="font-normal text-[28px] md:text-[36px] lg:text-[48px] leading-7 md:leading-10 lg:leading-[56px] text-white font-restora uppercase">
-            About The chef show
-          </h1>
+          <CustomTitle subTitle="All Day Experience" imgSrc={forkKnife} mainTitle=" About The chef show"/>
+        
           <p className="font-normal text-sm md:text-[16px] text-white w-auto md:w-[668px] capitalize leading-5 md:leading-7">
             Our restaurant offers a stylish and fun European cafe-restaurant
             experience, inspired by Executive Cheft Chris Hill, the all day

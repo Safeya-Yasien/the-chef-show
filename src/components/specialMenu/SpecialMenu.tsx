@@ -51,10 +51,11 @@ const SpecialMenu = () => {
     <section className="pt-[120px] ">
       <div className="container px-4 mx-auto">
         <div className="flex flex-col items-center justify-center text-center mb-20 gap-3">
-          <CustomTitle title="Special Offers" imgSrc={servingDome} />
-          <h1 className="font-normal text-[28px] md:text-[36px] lg:text-[48px] leading-7 md:leading-10 lg:leading-[56px] text-white font-restora uppercase">
-            THE special menu
-          </h1>
+          <CustomTitle
+            subTitle="Special Offers"
+            imgSrc={servingDome}
+            mainTitle="THE special menu"
+          />
         </div>
 
         {/* products */}

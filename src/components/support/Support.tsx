@@ -12,12 +12,11 @@ const Support = () => {
           {/* left side  */}
           <div className="w-full flex flex-col items-center justify-center gap-3">
             <CustomTitle
-              title="HELP & SUPPORT"
+              subTitle="HELP & SUPPORT"
               imgSrc={foodTakeawayPackaging}
+              mainTitle="NEED SUPPORT? WE’RE HERE TO HELP"
             />
-            <h1 className="font-normal text-[28px] md:text-[36px] lg:text-[48px] leading-7 md:leading-10 lg:leading-[56px] text-white font-restora uppercase text-center">
-              NEED SUPPORT? WE’RE HERE TO HELP{" "}
-            </h1>
+            
 
             <p className="text-white font-normal text-[16px] capitalize mb-[40px] text-center">
               Our restaurant offers a stylish and fun European cafe-restaurant

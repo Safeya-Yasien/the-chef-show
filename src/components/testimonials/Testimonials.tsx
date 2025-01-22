@@ -53,10 +53,11 @@ const Testimonials = () => {
       {/* custom title  */}
       <div className="container px-4 mx-auto">
         <div className="flex flex-col items-center justify-center text-center mb-20 gap-3">
-          <CustomTitle title="testimonials" imgSrc={microwave} />
-          <h1 className="font-normal text-[28px] md:text-[36px] lg:text-[48px] leading-7 md:leading-10 lg:leading-[56px] text-white font-restora uppercase">
-            The reviews of customers when coming to our restaurant!{" "}
-          </h1>
+          <CustomTitle
+            subTitle="testimonials"
+            imgSrc={microwave}
+            mainTitle="The reviews of customers when coming to our restaurant!"
+          />
         </div>
       </div>
 
