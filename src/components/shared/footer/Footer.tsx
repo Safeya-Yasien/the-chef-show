@@ -5,14 +5,14 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="rounded-tr-[140px] rounded-tl-[140px] border-t-[1px] border-t-[#C19F74] bg-black p-[80px] pb-[140px] mt-[160px]">
-      <div className="flex flex-col md:flex-row gap-[80px]">
+    <footer className="rounded-tr-[140px] rounded-tl-[140px] border-t-[1px] border-t-[#C19F74] [background:radial-gradient(42.7%_74.11%_at_50%_0%,_#1D1D1D_0%,_#131313_100%)] p-[80px] pb-[140px] mt-[160px]">
+      <div className="grid grid-cols-1 md:grid-cols-[1fr,2fr] gap-8">
         {/* first columns */}
         <div className="flex flex-col gap-8">
           <Link to="/" aria-label="Go to the Chef Show homepage">
             <img src="/chefShow.svg" alt="Chef Show" />
           </Link>
-          <p className="text-[#8B8B8B] font-normal text-xs w-auto md:w-[380px]">
+          <p className="text-[#8B8B8B] font-normal text-xs ">
             the chef show® is a female-driven, Egypt-based fashion brand,
             creating luxurious, empowering apparel for the modern woman.
             Experience elegance, confidence, and the celebration of every
@@ -50,7 +50,7 @@ const Footer = () => {
         </div>
 
         {/*second  */}
-        <div className="font-normal text-[20px] md:text-[32px] text-white font-restora ">
+        <div className="font-normal text-[16px] md:text-[24px] text-white font-restora ">
           Introducing our New Fashion Collection, where contemporary style meets
           timeless elegance.
         </div>
