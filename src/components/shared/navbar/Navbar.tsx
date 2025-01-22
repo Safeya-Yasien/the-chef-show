@@ -70,9 +70,9 @@ export function Navbar() {
 
   return (
     <header
-      className={`border-b-[0.5px] border-b-[#FFFFFF80]  fixed w-full top-0 left-0 z-50 h-[88px] 
+      className={` fixed w-full top-0 left-0 z-50 h-[88px] 
     transition-all duration-300 ${
-      isScrolled ? "backdrop-blur-2xl" : "bg-transparent"
+      isScrolled ? "backdrop-blur-2xl border-b-[0.5px] border-b-[#FFFFFF80] " : "bg-transparent"
     } `}
     >
       <nav className="w-full h-full z-20 top-0 start-0 px-4 xl:px-[60px]">
