@@ -5,7 +5,7 @@ import { FaFacebookF, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="rounded-tr-[140px] rounded-tl-[140px] border-t-[1px] border-t-[#C19F74] [background:radial-gradient(42.7%_74.11%_at_50%_0%,_#1D1D1D_0%,_#131313_100%)] p-[80px] pb-[140px] mt-[160px]">
+    <footer className="rounded-tr-[70px] rounded-tl-[70px] md:rounded-tr-[140px] md:rounded-tl-[140px] border-t-[1px] border-t-[#C19F74] [background:radial-gradient(42.7%_74.11%_at_50%_0%,_#1D1D1D_0%,_#131313_100%)] p-[80px] md:pb-[140px] mt-[80px] md:mt-[160px]">
       <div className="grid grid-cols-1 md:grid-cols-[1fr,2fr] gap-8">
         {/* first columns */}
         <div className="flex flex-col gap-8">
