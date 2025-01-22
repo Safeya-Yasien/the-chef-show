@@ -3,6 +3,14 @@ import servingDome from "../../assets/images/servingDome.svg";
 import menu2 from "../../assets/images/menu2.jpg";
 import { Link } from "react-router-dom";
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
 const products = [
   {
     imgSrc: menu2,
@@ -58,18 +66,26 @@ const SpecialMenu = () => {
           />
         </div>
 
-        {/* products */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 gap-y-[60px]">
-          {/* single product */}
-          {products.map((product, index) => (
-            <ProductCard
-              key={index}
-              imgSrc={product.imgSrc}
-              title={product.title}
-              description={product.description}
-            />
-          ))}
-        </div>
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full "
+        >
+          <CarouselContent className="gap-8">
+            {products.map((product, index) => (
+              <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
+                <ProductCard
+                  imgSrc={product.imgSrc}
+                  title={product.title}
+                  description={product.description}
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
     </section>
   );
