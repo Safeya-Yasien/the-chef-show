@@ -58,19 +58,17 @@ const SpecialMenu = () => {
   return (
     <section className="pt-[120px] ">
       <div className="container px-4 mx-auto">
-        <div className="flex flex-col items-center justify-center text-center mb-20 gap-3">
           <CustomTitle
             subTitle="Special Offers"
             imgSrc={servingDome}
             mainTitle="THE special menu"
           />
-        </div>
 
         <Carousel
           opts={{
             align: "start",
           }}
-          className="w-full "
+          className="w-full mt-20 "
         >
           <CarouselContent className="gap-4">
             {products.map((product, index) => (

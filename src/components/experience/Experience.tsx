@@ -8,16 +8,13 @@ const Experience = () => {
     <section className="pt-[120px]" id="experience">
       <div className="container px-4 mx-auto">
         {/* custom title  */}
-        <div className="flex flex-col items-center justify-center text-center mb-10 md:mb-20 gap-3">
-          <CustomTitle
-            subTitle="Today Specials"
-            imgSrc={champagnePartyAlcohol}
-            mainTitle={"The perfect place for an exceptional experience"}
-          />
-        </div>
+        <CustomTitle
+          subTitle="Today Specials"
+          imgSrc={champagnePartyAlcohol}
+          mainTitle={"The perfect place for an exceptional experience"}
+        />
 
-        {/*  */}
-        <div className="flex flex-col lg:flex-row">
+        <div className="flex flex-col lg:flex-row mt-20">
           {/* imgs */}
           <div className="flex flex-col md:flex-row gap-[32px] w-auto lg:w-[850px] items-center">
             <div className="flex items-center justify-center">

@@ -51,14 +51,12 @@ const Testimonials = () => {
   return (
     <section className="pt-[120px]">
       {/* custom title  */}
-      <div className="container px-4 mx-auto">
-        <div className="flex flex-col items-center justify-center text-center mb-20 gap-3">
+      <div className="container px-4 mx-auto mb-20">
           <CustomTitle
             subTitle="testimonials"
             imgSrc={microwave}
             mainTitle="The reviews of customers when coming to our restaurant!"
           />
-        </div>
       </div>
 
       {/* reviews */}
