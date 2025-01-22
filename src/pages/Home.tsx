@@ -12,7 +12,7 @@ const Home = () => {
     <div className="overflow-x-hidden">
       {/* hero section */}
       <Hero />
-      <div className="px-[40px] md:px-[80px]">
+      <div className="">
         <About />
         <Experience />
         <SpecialMenu />
