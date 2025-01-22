@@ -31,15 +31,16 @@ const SheetMenu = ({ navLinks }: { navLinks: INavLinkProps[] }) => {
             const isActive = location.pathname === link.to;
 
             return (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`capitalize flex w-full items-center py-2 text-lg font-bold italic font-restora transition-colors ${
-                  isActive ? "text-[#C19F74]" : "text-white"
-                }`}
-              >
-                {link.label}
-              </Link>
+              <SheetClose asChild key={link.to}>
+                <Link
+                  to={link.to}
+                  className={`capitalize flex w-full items-center py-2 text-lg font-bold italic font-restora transition-colors ${
+                    isActive ? "text-[#C19F74]" : "text-white"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              </SheetClose>
             );
           })}
         </nav>
