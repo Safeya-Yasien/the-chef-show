@@ -72,7 +72,7 @@ const SpecialMenu = () => {
           }}
           className="w-full "
         >
-          <CarouselContent className="gap-8">
+          <CarouselContent className="gap-4">
             {products.map((product, index) => (
               <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
                 <ProductCard
