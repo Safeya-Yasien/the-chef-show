@@ -26,45 +26,48 @@ const Hero = () => {
 
   return (
     <div
-      className="hero-section bg-no-repeat bg-cover bg-center rounded-br-[60px] rounded-bl-[60px] md:rounded-br-[120px] md:rounded-bl-[120px  h-[90vh]
+      className="hero-section bg-no-repeat bg-cover bg-center rounded-br-[50px] rounded-bl-[50px] md:rounded-br-[120px] md:rounded-bl-[120px] h-screen md:h-[90vh]
   flex flex-col items-center justify-center relative"
       style={{ backgroundImage: `url(${bgImages[currentIndex]})` }}
     >
       {/* overlay */}
-      <div className="absolute w-full h-full top-0 left-0 bg-[#000000BF] rounded-br-[60px] rounded-bl-[60px] md:rounded-br-[120px] md:rounded-bl-[120px] border-b-[1px] border-b-[#C19F74]"></div>
+      <div className="absolute w-full h-full top-0 left-0 bg-[#000000BF] rounded-br-[50px] rounded-bl-[50px] md:rounded-br-[120px] md:rounded-bl-[120px] border-b-[1px] border-b-[#C19F74] z-0"></div>
 
-      {/* text */}
-      <div className="flex flex-col items-center justify-center gap-[15px] text-center  w-auto md:w-[800px] relative z-10">
-        <CustomTitle
-          title={"welcome to THE CHEF SHOW"}
-          imgSrc={barbecueSteak}
-        />
-        <h1 className="text-white font-normal font-restora text-[30px] md:text-[72px] uppercase text-center leading-tight tracking-[0.02em]">
-          delicious food eating experience
-        </h1>
-        <p className="text-white tracking-[0.04em] leading-[20px] text-[20px] font-normal mb-[20px]">
-          we serve food, Harmony, & Laughter Since 1991
-        </p>
-        <Link
-          to="reservation"
-          className="text-white border-[2px] border-[#C19F74] uppercase text-sm font-medium leading-[14px] tracking-[0.04em] w-[150px] h-[50px] flex items-center justify-center"
-          aria-label="Go to the reservation page"
-        >
-          RESERVATION
-        </Link>
+      <div className="container z-20 relative max-w-[1200px] mx-auto px-4">
+        {/* text content */}
+        <div className="flex flex-col items-center justify-center gap-[15px] text-center text-white ">
+          <CustomTitle
+            title={"welcome to THE CHEF SHOW"}
+            imgSrc={barbecueSteak}
+          />
+
+          <h1 className="font-normal leading-[3.6rem] md:leading-[4rem] lg:leading-[5rem] font-restora text-[30px] md:text-[56px] lg:text-[72px] capitalize max-w-[40rem]">
+            delicious food eating experience
+          </h1>
+          <p className="tracking-[0.04rem] text-[20px] font-normal mb-[20px]">
+            we serve food, Harmony, & Laughter Since 1991
+          </p>
+          <Link
+            to="reservation"
+            className="border-[2px] border-[#C19F74] uppercase text-sm font-medium leading-[14px] tracking-[0.04em] w-[150px] h-[50px] flex items-center justify-center"
+            aria-label="Go to the reservation page"
+          >
+            RESERVATION
+          </Link>
+        </div>
       </div>
 
       {/* Navigation Arrows */}
 
-      <div className="absolute hidden md:flex justify-between items-center w-full h-full px-10">
+      <div className="absolute hidden md:flex justify-between items-center w-full h-full px-6 ">
         <button
-          className="text-white  border border-white  w-[80px] h-[80px] flex items-center justify-center rounded-full"
+          className="text-white  border border-white  w-[80px] h-[80px] flex items-center justify-center rounded-full relative z-20"
           onClick={handlePrev}
         >
           <GoArrowLeft className="w-[40px] h-[40px] " />
         </button>
         <button
-          className="text-white  border border-white  w-[80px] h-[80px] flex items-center justify-center rounded-full"
+          className="text-white  border border-white  w-[80px] h-[80px] flex items-center justify-center rounded-full relative z-20"
           onClick={handleNext}
         >
           <GoArrowRight className="w-[40px] h-[40px] " />
@@ -72,7 +75,7 @@ const Hero = () => {
       </div>
 
       {/* Indicators (Visible on Small Screens) */}
-      <div className="absolute bottom-5 flex gap-2 md:hidden">
+      <div className="absolute bottom-6 flex gap-2 md:hidden">
         {bgImages.map((_, index) => (
           <button
             key={index}
