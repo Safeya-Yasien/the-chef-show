@@ -56,19 +56,19 @@ const Reservation = () => {
                 <div className="flex items-center gap-4">
                   <div className="flex items-center gap-2">
                     <div className="w-[10px] h-[10px]  bg-[#EB5757]" />
-                    <p className="uppercase text-white font-thin text-sm ">
+                    <p className="uppercase text-white font-thin text-[10px] sm:text-sm ">
                       fully booked
                     </p>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-[10px] h-[10px] bg-[#FCA82A]" />
-                    <p className="uppercase text-white font-thin text-sm ">
+                    <p className="uppercase text-white font-thin text-[10px] sm:text-sm ">
                       Low Availability
                     </p>
                   </div>
                   <div className="flex items-center gap-2">
                     <div className="w-[10px] h-[10px] bg-[#27AE60]" />
-                    <p className="uppercase text-white font-thin text-sm ">
+                    <p className="uppercase text-white font-thin text-[10px] sm:text-sm ">
                       Available
                     </p>
                   </div>
