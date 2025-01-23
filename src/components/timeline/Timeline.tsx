@@ -50,7 +50,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             className="flex justify-start pt-10 md:pt-40 md:gap-10"
           >
             <div className="sticky flex flex-col z-40  top-40 self-start max-w-xs lg:max-w-sm md:w-full gap-2">
-              <h3 className="hidden md:block text-xl md:pl-20 md:text-5xl font-bold text-white ">
+              <h3 className="hidden md:block text-xl md:pl-20 md:text-4xl font-bold text-white ">
                 {item.title}
               </h3>
 
