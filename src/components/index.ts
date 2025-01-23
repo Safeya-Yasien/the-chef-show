@@ -7,6 +7,7 @@ import Support from "./support/Support";
 import SectionHeader from "./sectionHeader/SectionHeader";
 import BookingCalendar from "./bookingCalendar/BookingCalendar";
 import ReservationForm from "./reservationForm/ReservationForm";
+import { TimelineDemo } from "./timeline/TimelineDemo";
 
 export {
   Hero,
@@ -18,4 +19,5 @@ export {
   SectionHeader,
   BookingCalendar,
   ReservationForm,
+  TimelineDemo,
 };
