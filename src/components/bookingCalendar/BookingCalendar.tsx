@@ -78,7 +78,9 @@ const BookingCalendar = () => {
               </h3>
               <h4 className="text-white font-normal text-[24px]">{d.date}</h4>
               <div
-                className={`w-[64px] border-[3px] border-[#C19F74] rounded-lg`}
+                className={`w-[64px] border-[3px] border-[#C19F74] rounded-lg ${
+                  selectedDay === d.id ? "border-green-500" : ""
+                }`}
               />
               <p
                 className={`text-[10px] font-medium uppercase ${
