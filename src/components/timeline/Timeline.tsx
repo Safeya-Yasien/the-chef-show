@@ -9,7 +9,7 @@ interface TimelineEntry {
   content: React.ReactNode;
 }
 
-const words = ["passion", "adventure", "story", "journey", "experience"];
+// const words = ["passion", "adventure", "story", "journey", "experience"];
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
