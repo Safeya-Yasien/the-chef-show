@@ -1,5 +1,6 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
+import { MorphingText } from "../ui/morphing-text";
 
 interface TimelineEntry {
   title: string;
@@ -9,7 +10,7 @@ interface TimelineEntry {
   content: React.ReactNode;
 }
 
-// const words = ["passion", "adventure", "story", "journey", "experience"];
+const texts = ["passion", "adventure", "story", "journey", "experience"];
 
 export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -34,8 +35,12 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   return (
     <div className="w-full font-restora md:px-10" ref={containerRef}>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-white max-w-4xl">
-          Our Culinary{" "}
+        <h2 className="text-lg md:text-4xl mb-4 text-white max-w-4xl flex items-center gap-2">
+          Our Culinary{"  "}
+          <MorphingText
+            texts={texts}
+            className="!text-lg !md:text-6xl !text-[50px] !h-0 !font-normal !leading-[0] !mx-0 !w-0  !max-w-4xl !inline !font-restora !italic capitalize "
+          />
         </h2>
         <p className="text-white text-sm md:text-base max-w-sm">
           Welcome to The Chef Show, where culinary meets creativity, connection,
