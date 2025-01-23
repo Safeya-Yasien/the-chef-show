@@ -6,6 +6,8 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 
+import noiseBg from "../../assets/images/noise-bg.svg";
+
 interface ISectionHeaderProps {
   title: string;
   breadcrumbLink: string;
@@ -19,12 +21,21 @@ const SectionHeader = ({
 }: ISectionHeaderProps) => {
   return (
     <div
-      className="hero-section rounded-br-[120px] rounded-bl-[120px] border-b border-[#C19F74] flex flex-col items-center justify-center h-[420px] text-center 
-              bg-no-repeat bg-center"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
+      className="hero-section  rounded-br-[50px] rounded-bl-[50px] md:rounded-br-[120px] md:rounded-bl-[120px] border-b border-[#C19F74] flex flex-col items-center justify-center
+                h-[420px] md:h-[750px] lg:h-[550px] text-center relative "
     >
-      <div className="relative ">
-        <h1 className="uppercase font-restora text-white font-normal text-[35px] md:text-[56px] tracking-[0.02em] ">
+      <img
+        src={backgroundImage}
+        alt="noise"
+        className="absolute top-[88px] bottom-0 left-0 w-full h-full md:h-auto "
+      />
+      <img
+        src={noiseBg}
+        alt="noise"
+        className="h-full w-full absolute top-[88px] bottom-0 left-0"
+      />
+      <div className="relative container mx-auto px-4 ">
+        <h1 className="uppercase font-restora text-white font-normal text-[35px] md:text-[56px] lg:text-[70px] mb-2">
           {title}
         </h1>
 

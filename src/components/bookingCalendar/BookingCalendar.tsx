@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 interface IItem {
   id: number;
@@ -46,7 +45,7 @@ const BookingCalendar = () => {
   return (
     <div className="relative">
       {/* navigation */}
-      <div className="text-white font-normal text-[24px] text-center my-[48px] flex items-center justify-between">
+      {/* <div className="text-white font-normal text-[24px] text-center my-[48px] flex items-center justify-between">
         <button className="text-[#3B3B3B] ">
           <GoArrowLeft className="" />
         </button>
@@ -54,9 +53,9 @@ const BookingCalendar = () => {
         <button className="text-white">
           <GoArrowRight />
         </button>
-      </div>
+      </div> */}
       {/* table */}
-      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+      <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5 mt-8">
         {data.slice(0, showMore ? data.length : 9).map((d) => {
           return (
             <div
@@ -92,10 +91,10 @@ const BookingCalendar = () => {
           );
         })}
         <button
-          className="bg-[#C19F74] text-white uppercase font-restora flex items-center justify-center font-normal text-[24px] h-[153px]"
+          className="bg-[#C19F74] text-white uppercase font-restora flex items-center justify-center font-normal text-lg  md:text-[24px] h-[153px]"
           onClick={handleShowMore}
         >
-          {showMore ? <GoArrowLeft className="" /> : "More"}
+          {showMore ? "Show Less" : "More"}
         </button>
       </div>
     </div>

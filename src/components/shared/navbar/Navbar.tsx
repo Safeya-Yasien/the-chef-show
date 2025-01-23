@@ -72,7 +72,9 @@ export function Navbar() {
     <header
       className={` fixed w-full top-0 left-0 z-50 h-[88px] 
     transition-all duration-300 ${
-      isScrolled ? "backdrop-blur-2xl border-b-[0.5px] border-b-[#FFFFFF80] " : "bg-transparent"
+      isScrolled
+        ? "backdrop-blur-2xl border-b-[0.5px] border-b-[#FFFFFF80] "
+        : "bg-transparent"
     } `}
     >
       <nav className="w-full h-full z-20 top-0 start-0 px-4 xl:px-[60px]">
@@ -101,7 +103,7 @@ export function Navbar() {
             id="navbar-sticky"
           >
             {/* links */}
-            <ul className="flex bg-transparent xl:relative gap-[64px] items-center w-full w-auto h-full">
+            <ul className="flex bg-transparent xl:relative gap-[64px] items-center w-auto h-full">
               {navLinks.map((link) => (
                 <li key={link.to} className="w-auto h-full">
                   <NavLink to={link.to} closeMenu={closeMenu}>

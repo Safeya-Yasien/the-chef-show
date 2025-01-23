@@ -37,13 +37,11 @@ const Hero = () => {
         {/* text content */}
         <div className="flex flex-col items-center justify-center gap-[15px] text-center text-white ">
           <CustomTitle
-            title={"welcome to THE CHEF SHOW"}
+            subTitle={"welcome to THE CHEF SHOW"}
             imgSrc={barbecueSteak}
+            mainTitle="delicious food eating experience"
           />
 
-          <h1 className="font-normal leading-[3.6rem] md:leading-[4rem] lg:leading-[5rem] font-restora text-[30px] md:text-[56px] lg:text-[72px] capitalize max-w-[40rem]">
-            delicious food eating experience
-          </h1>
           <p className="tracking-[0.04rem] text-[20px] font-normal mb-[20px]">
             we serve food, Harmony, & Laughter Since 1991
           </p>

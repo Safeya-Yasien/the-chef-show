@@ -6,6 +6,7 @@ import Testimonials from "./testimonials/Testimonials";
 import Support from "./support/Support";
 import SectionHeader from "./sectionHeader/SectionHeader";
 import BookingCalendar from "./bookingCalendar/BookingCalendar";
+import ReservationForm from "./reservationForm/ReservationForm";
 
 export {
   Hero,
@@ -16,4 +17,5 @@ export {
   Support,
   SectionHeader,
   BookingCalendar,
+  ReservationForm,
 };
