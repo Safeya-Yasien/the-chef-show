@@ -86,7 +86,7 @@ const ReservationForm = ({
         <button
           type="submit"
           disabled={!isFormValid}
-          className={`w-full h-[52px] flex items-center justify-center uppercase font-medium text-xs md:text-lg tracking-[0.04em] mt-[24px] mx-auto bg-[#C19F74] text-white opacity-45 ${
+          className={`w-full h-[52px] flex items-center justify-center uppercase font-medium text-xs md:text-sm lg:text-lg tracking-[0.04em] mt-[24px] mx-auto bg-[#C19F74] text-white opacity-45 ${
             isFormValid ? "bg-[#C19F74] opacity-100" : "cursor-not-allowed"
           }`}
           aria-label="Complete your reservation"
