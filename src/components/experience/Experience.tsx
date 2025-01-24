@@ -2,6 +2,7 @@ import { CustomTitle } from "../shared";
 import champagnePartyAlcohol from "../../assets/images/champagnePartyAlcohol.svg";
 import experience1 from "../../assets/images/experience1.jpg";
 import experience2 from "../../assets/images/experience2.jpg";
+import { BlurFade } from "../ui/blur-fade";
 
 const Experience = () => {
   return (
@@ -18,20 +19,24 @@ const Experience = () => {
           {/* imgs */}
           <div className="flex flex-col md:flex-row gap-[32px] w-auto lg:w-[850px] items-center">
             <div className="flex items-center justify-center">
-              <img
-                src={experience2}
-                alt=""
-                loading="lazy"
-                className="w-full h-full"
-              />
+              <BlurFade delay={0.25} inView>
+                <img
+                  src={experience2}
+                  alt=""
+                  loading="lazy"
+                  className="w-full h-full"
+                />{" "}
+              </BlurFade>
             </div>
             <div className="">
-              <img
-                src={experience1}
-                alt=""
-                loading="lazy"
-                className="w-full h-full"
-              />
+              <BlurFade delay={0.25} inView>
+                <img
+                  src={experience1}
+                  alt=""
+                  loading="lazy"
+                  className="w-full h-full"
+                />{" "}
+              </BlurFade>
             </div>
           </div>
 

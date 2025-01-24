@@ -2,6 +2,7 @@ import { CustomTitle } from "../shared";
 import foodTakeawayPackaging from "../../assets/images/foodTakeawayPackaging.svg";
 import support from "../../assets/images/support.jpg";
 import { Link } from "react-router-dom";
+import { BlurFade } from "../ui/blur-fade";
 
 const Support = () => {
   return (
@@ -15,7 +16,6 @@ const Support = () => {
               imgSrc={foodTakeawayPackaging}
               mainTitle="NEED SUPPORT? WE’RE HERE TO HELP"
             />
-            
 
             <p className="text-white font-normal text-[16px] capitalize mb-[40px] text-center">
               Our restaurant offers a stylish and fun European cafe-restaurant
@@ -37,12 +37,14 @@ const Support = () => {
           </div>
           {/* right side */}
           <div className="w-full self-center">
-            <img
-              src={support}
-              alt="support"
-              loading="lazy"
-              className="object-contain w-full h-auto"
-            />
+            <BlurFade delay={0.25} inView>
+              <img
+                src={support}
+                alt="support"
+                loading="lazy"
+                className="object-contain w-full h-auto"
+              />
+            </BlurFade>
           </div>
           {/* </div> */}
         </div>

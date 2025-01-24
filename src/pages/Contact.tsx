@@ -1,6 +1,7 @@
 import { SectionHeader } from "@/components";
 import contact from "../assets/images/contact.jpg";
 import group from "../assets/images/group.png";
+import { BlurFade } from "@/components/ui/blur-fade";
 
 const Contact = () => {
   return (
@@ -70,12 +71,14 @@ const Contact = () => {
 
           {/* img */}
           <div className="hidden md:block">
-            <img
-              src={contact}
-              alt="contact"
-              loading="lazy"
-              className="h-full w-full "
-            />
+            <BlurFade delay={0.25} inView>
+              <img
+                src={contact}
+                alt="contact"
+                loading="lazy"
+                className="h-full w-full "
+              />{" "}
+            </BlurFade>
           </div>
         </div>
       </div>

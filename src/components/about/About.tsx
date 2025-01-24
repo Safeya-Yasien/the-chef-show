@@ -3,6 +3,7 @@ import forkKnife from "../../assets/images/forkKnife.svg";
 import image from "../../assets/images/aboutImages/image.jpg";
 import image1 from "../../assets/images/aboutImages/image1.jpg";
 import image2 from "../../assets/images/aboutImages/image2.jpg";
+import { BlurFade } from "../ui/blur-fade";
 
 const About = () => {
   return (
@@ -27,12 +28,14 @@ const About = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-[48px]">
           <div className="h-auto md:h-[714px] flex flex-col gap-[20px]">
             <div className="w-auto md:w-[438px] h-[518px]">
-              <img
-                src={image}
-                alt=""
-                loading="lazy"
-                className="object-cover w-full h-full"
-              />
+              <BlurFade delay={0.25} inView>
+                <img
+                  src={image}
+                  alt=""
+                  loading="lazy"
+                  className="object-cover w-full h-full"
+                />
+              </BlurFade>
             </div>
             {/* text */}
             <div className="flex flex-col gap-2">
@@ -50,12 +53,14 @@ const About = () => {
           </div>
           <div className="h-auto md:h-[714px] flex flex-col gap-[20px]">
             <div className=" justify-center items-center">
-              <img
-                src={image1}
-                alt=""
-                loading="lazy"
-                className="object-cover w-full h-full"
-              />
+              <BlurFade delay={0.25} inView>
+                <img
+                  src={image1}
+                  alt=""
+                  loading="lazy"
+                  className="object-cover w-full h-full"
+                />{" "}
+              </BlurFade>
             </div>
             {/* text */}
             <div className="flex flex-col gap-2">
@@ -73,12 +78,14 @@ const About = () => {
           </div>
           <div className="h-auto md:h-[714px] flex flex-col gap-[20px]">
             <div className="w-auto md:w-[438px] h-[518px]">
-              <img
-                src={image2}
-                alt=""
-                loading="lazy"
-                className="object-cover w-full h-full"
-              />
+              <BlurFade delay={0.25} inView>
+                <img
+                  src={image2}
+                  alt=""
+                  loading="lazy"
+                  className="object-cover w-full h-full"
+                />
+              </BlurFade>
             </div>
             {/* text */}
             <div className="flex flex-col gap-2">
