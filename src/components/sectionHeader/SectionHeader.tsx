@@ -22,7 +22,7 @@ const SectionHeader = ({
   return (
     <div
       className="hero-section  rounded-br-[50px] rounded-bl-[50px] md:rounded-br-[120px] md:rounded-bl-[120px] border-b border-[#C19F74] flex flex-col items-center justify-center
-                h-[420px] md:h-[750px] lg:h-[550px] text-center relative "
+                h-[420px] md:h-[750px] lg:h-[550px] text-center relative overflow-hidden "
     >
       <img
         src={backgroundImage}
