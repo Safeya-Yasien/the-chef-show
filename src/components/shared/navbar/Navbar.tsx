@@ -92,10 +92,6 @@ export function Navbar() {
             />
           </Link>
 
-          <div className="flex items-center    h-full">
-            {/* Mobile Menu Button (Opens Drawer) */}
-            <SheetMenu navLinks={navLinks} />
-          </div>
           <div
             className={`items-center justify-between h-full ${
               isMenuOpen ? "block" : "hidden"
@@ -120,6 +116,10 @@ export function Navbar() {
           >
             RESERVATION
           </Link>
+          <div className="flex items-center h-full lg:hidden ">
+            {/* Mobile Menu Button (Opens Drawer) */}
+            <SheetMenu navLinks={navLinks} />
+          </div>
         </div>
       </nav>
     </header>

@@ -21,7 +21,7 @@ const SheetMenu = ({ navLinks }: { navLinks: INavLinkProps[] }) => {
   return (
     <Sheet>
       <SheetTrigger asChild className="">
-        <Button className="text-lg bg-transparent flex justify-center p-1 items-center lg:hidden hover:bg-white hover:text-black rounded-none">
+        <Button className="text-lg bg-transparent flex justify-center p-1 items-center hover:bg-white hover:text-black rounded-none">
           <Menu className="!w-8 !h-8" />
         </Button>
       </SheetTrigger>
