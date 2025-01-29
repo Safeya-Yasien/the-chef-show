@@ -56,6 +56,7 @@ const Testimonials = () => {
           subTitle="testimonials"
           imgSrc={microwave}
           mainTitle="The reviews of customers when coming to our restaurant!"
+        titleWidth="md:max-w-6xl"
         />
       </div>
 
