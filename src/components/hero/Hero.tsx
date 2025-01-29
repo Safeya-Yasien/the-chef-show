@@ -26,7 +26,7 @@ const Hero = () => {
 
   return (
     <div
-      className="hero-section bg-no-repeat bg-cover bg-center rounded-br-[50px] rounded-bl-[50px] md:rounded-br-[120px] md:rounded-bl-[120px] h-screen md:h-[90vh]
+      className="hero-section bg-no-repeat bg-cover bg-center rounded-br-[50px] rounded-bl-[50px] md:rounded-br-[120px] md:rounded-bl-[120px] h-[80vh] md:h-[90vh]
   flex flex-col items-center justify-center relative"
       style={{ backgroundImage: `url(${bgImages[currentIndex]})` }}
     >
