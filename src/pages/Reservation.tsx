@@ -45,10 +45,10 @@ const Reservation = () => {
 
       <section className="relative  min-h-screen mt-32">
         <div className="container mx-auto">
-          <div className="grid grid-cols-12 gap-8">
+          <div className="grid grid-cols-12 gap-y-8 sm:gap-8">
             {/* calendar */}
             <div className="col-span-12 md:col-span-8">
-              <div className="border border-[#C19F74] p-8 ">
+              <div className="border border-[#C19F74] p-4 sm:p-8 ">
                 <h2 className="font-normal text-2xl md:text-[40px] text-white font-restora mb-4">
                   Pick Your Day
                 </h2>

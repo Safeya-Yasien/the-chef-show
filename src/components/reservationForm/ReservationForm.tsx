@@ -17,7 +17,7 @@ const ReservationForm = ({
   isFormValid,
 }: IReservationFormProps) => {
   return (
-    <div className="border border-[#C19F74] p-8 sticky top-24">
+    <div className="border border-[#C19F74] p-4 sm:p-8 sticky top-24">
       <h2 className="text-white font-normal text-2xl md:text-[32px] mb-2 font-restora">
         Enter Your Data
       </h2>
