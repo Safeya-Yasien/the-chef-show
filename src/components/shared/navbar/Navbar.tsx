@@ -71,12 +71,10 @@ export function Navbar() {
   return (
     <header
       className={` fixed w-full top-0 left-0 z-50 h-[88px] 
-    transition-all duration-300
-    ${location.pathname === "/" ? "border-b-[0.5px] border-b-[#ffffff1f]" : ""}
+    transition-all duration-300 border-b-[0.5px]
+    ${location.pathname === "/" ? " border-b-[#ffffff1f]" : ""}
     ${
-      isScrolled
-        ? "backdrop-blur-2xl border-b-[0.5px] border-b-[#FFFFFF80] "
-        : "bg-transparent"
+      isScrolled ? "backdrop-blur-2xl  border-b-[#FFFFFF80] " : "bg-transparent"
     }
    `}
     >
