@@ -27,7 +27,7 @@ const About = () => {
         {/*  */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-[48px]">
           <div className="h-auto md:h-[714px] flex flex-col gap-[20px]">
-            <div className="w-auto md:w-[438px] h-[518px]">
+            <div className=" justify-center items-center">
               <BlurFade delay={0.25} inView>
                 <img
                   src={image}
@@ -35,7 +35,7 @@ const About = () => {
                   loading="lazy"
                   className="object-cover w-full h-full"
                 />
-              </BlurFade>
+              </BlurFade>{" "}
             </div>
             {/* text */}
             <div className="flex flex-col gap-2">
