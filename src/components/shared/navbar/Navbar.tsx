@@ -77,7 +77,8 @@ export function Navbar() {
       isScrolled
         ? "backdrop-blur-2xl border-b-[0.5px] border-b-[#FFFFFF80] "
         : "bg-transparent"
-    } `}
+    }
+   `}
     >
       <nav className="w-full h-full z-20 top-0 start-0 px-4 xl:px-[60px]">
         <div className="flex items-center justify-between mx-auto px-4 h-full">
