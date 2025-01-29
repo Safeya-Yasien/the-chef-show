@@ -15,13 +15,13 @@ const Contact = () => {
       />
 
       {/* form */}
-      <div className="px-[20px] md:px-[80px] ">
+      <section className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 border border-[#C19F74] mt-[80px] ">
-          <div className="py-[64px] px-[40px]">
-            <h2 className="font-restora text-white font-normal text-[48px] tracking-[0.02em] capitalize mb-[24px]">
+          <div className="py-[30px] md:py-[64px] px-[20px] md:px-[40px]">
+            <h2 className="font-restora text-white font-normal text-[24px] md:text-[48px] tracking-[0.02em] capitalize mb-4 md:mb-[24px]">
               Contact us
             </h2>
-            <p className="text-white font-thin text-[20px] leading-[32px] mb-10">
+            <p className="text-white font-thin text-sm md:text-[20px] leading-5 md:leading-[32px] mb-8 md:mb-10">
               Hello! Do you have any questions or suggestions about this site,
               or just want to say Hi? Send a message using the below form. I
               will get back to you as soon as possible.
@@ -81,7 +81,7 @@ const Contact = () => {
             </BlurFade>
           </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };
