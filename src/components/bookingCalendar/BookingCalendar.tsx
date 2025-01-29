@@ -93,7 +93,7 @@ const BookingCalendar = () => {
           );
         })}
         <button
-          className="bg-[#C19F74] text-white uppercase font-restora flex items-center justify-center font-normal text-lg  md:text-[24px] h-[153px]"
+          className="bg-[#C19F74] text-white uppercase font-restora flex items-center justify-center font-normal text-sm  md:text-[20px] h-[153px]"
           onClick={handleShowMore}
         >
           {showMore ? "Show Less" : "More"}
