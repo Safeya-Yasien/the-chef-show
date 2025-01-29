@@ -34,7 +34,7 @@ const SectionHeader = ({
         alt="noise"
         className="h-full w-full absolute top-[88px] bottom-0 left-0"
       />
-      <div className="relative container mx-auto px-4 ">
+      <div className="relative container mx-auto">
         <h1 className="uppercase font-restora text-white font-normal text-[35px] md:text-[56px] lg:text-[70px] mb-2">
           {title}
         </h1>

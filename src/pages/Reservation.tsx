@@ -44,7 +44,7 @@ const Reservation = () => {
       />
 
       <section className="relative  min-h-screen mt-32">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="grid grid-cols-12 gap-8">
             {/* calendar */}
             <div className="col-span-12 md:col-span-8">

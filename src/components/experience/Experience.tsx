@@ -7,7 +7,7 @@ import { BlurFade } from "../ui/blur-fade";
 const Experience = () => {
   return (
     <section className="pt-[120px]" id="experience">
-      <div className="container px-4 mx-auto">
+      <div className="container mx-auto">
         {/* custom title  */}
         <CustomTitle
           subTitle="Today Specials"

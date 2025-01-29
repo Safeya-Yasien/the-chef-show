@@ -33,7 +33,7 @@ const Hero = () => {
       {/* overlay */}
       <div className="absolute w-full h-full top-0 left-0 bg-[#000000BF] rounded-br-[50px] rounded-bl-[50px] md:rounded-br-[120px] md:rounded-bl-[120px] border-b-[1px] border-b-[#C19F74] z-0"></div>
 
-      <div className="container z-20 relative max-w-[1200px] mx-auto px-4">
+      <div className="container z-20 relative max-w-[1200px] mx-auto">
         {/* text content */}
         <div className="flex flex-col items-center justify-center gap-[15px] text-center text-white ">
           <CustomTitle

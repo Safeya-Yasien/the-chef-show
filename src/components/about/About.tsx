@@ -8,7 +8,7 @@ import { BlurFade } from "../ui/blur-fade";
 const About = () => {
   return (
     <section className="pt-[120px]" id="contact">
-      <div className="container  mx-auto">
+      <div className="container mx-auto">
         {/* custom title  */}
         <div className="flex flex-col items-center justify-center text-center mb-20 gap-3">
           <CustomTitle

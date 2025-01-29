@@ -7,7 +7,7 @@ import { BlurFade } from "../ui/blur-fade";
 const Support = () => {
   return (
     <section className="pt-[120px]  " id="support">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <div className="w-full flex flex-col md:flex-row justify-between gap-8">
           {/* left side  */}
           <div className="w-full flex flex-col items-center justify-center gap-3">

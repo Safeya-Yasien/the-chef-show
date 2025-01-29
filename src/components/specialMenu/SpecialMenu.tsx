@@ -57,7 +57,7 @@ const products = [
 const SpecialMenu = () => {
   return (
     <section className="pt-[120px] ">
-      <div className="container px-4 mx-auto">
+      <div className="container mx-auto">
           <CustomTitle
             subTitle="Special Offers"
             imgSrc={servingDome}
