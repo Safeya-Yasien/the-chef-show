@@ -37,7 +37,7 @@ const ForgotPassword = () => {
             </button>
 
             <Link
-              to="/login"
+              to="/verification-code"
               className="font-medium text-[16px] text-white flex items-center gap-2 text-center mx-auto"
             >
               <GoArrowLeft /> Back to Login
@@ -50,11 +50,9 @@ const ForgotPassword = () => {
           imageSrc={registerImg}
           heading={
             <>
-              <span className="text-[#C19F74]">Verify</span>
+              <span className="text-[#ECCBA2]">no worries!</span>
               <br />
-              Your identity
-              <br />
-              to continue
+              let's reset it.
             </>
           }
         />
