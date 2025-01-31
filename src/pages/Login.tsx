@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 import loginImg from "../assets/images/loginImg.webp";
-import authIcon from "../assets/images/authIcon.svg";
+import { AuthBanner } from "@/components";
 
 const Login = () => {
   return (
@@ -58,35 +58,18 @@ const Login = () => {
         </div>
 
         {/* right side */}
-        <div className="relative h-full w-full">
-          <img
-            src={loginImg}
-            alt=""
-            loading="lazy"
-            className="h-full object-cover"
-          />
-
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
-          {/* Text on top */}
-          <div className="absolute inset-0 p-[48px]">
-            <h2 className="font-restora uppercase text-white text-2xl md:text-[35px] lg:text-[56px] font-normal leading-[40px] md:leading-[50px] lg:leading-[70px]">
+        <AuthBanner
+          imageSrc={loginImg}
+          heading={
+            <>
               Taste
               <br />
               the Experience
               <br />
               <span className="text-[#C19F74]">log in now!</span>
-            </h2>
-          </div>
-
-          {/* auth icon */}
-          <img
-            src={authIcon}
-            alt="Auth Icon"
-            className="absolute bottom-4 right-4 w-16 h-16 z-10"
-          />
-        </div>
+            </>
+          }
+        />
       </div>
     </div>
   );

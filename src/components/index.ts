@@ -8,6 +8,8 @@ import SectionHeader from "./sectionHeader/SectionHeader";
 import BookingCalendar from "./bookingCalendar/BookingCalendar";
 import ReservationForm from "./reservationForm/ReservationForm";
 import { TimelineDemo } from "./timeline/TimelineDemo";
+import AuthBanner from "./authBanner/AuthBanner"; 
+
 
 export {
   Hero,
@@ -20,4 +22,5 @@ export {
   BookingCalendar,
   ReservationForm,
   TimelineDemo,
+  AuthBanner
 };
