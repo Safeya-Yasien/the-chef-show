@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 
-import loginImg from "../assets/images/loginImg.webp";
 import { AuthBanner } from "@/components";
+
+import loginImg from "../assets/images/loginImg.webp";
 
 const Login = () => {
   return (
@@ -29,8 +30,8 @@ const Login = () => {
                 className="border border-[#C19F74] p-[10px] bg-transparent text-white placeholder-[#6F6F6F] outline-none"
               />
             </div>
-            <div className="flex flex-col gap-[10px] ">
-              <label className="font-light text-[16px] ">Password</label>
+            <div className="flex flex-col gap-[10px]">
+              <label className="font-light text-[16px]">Password</label>
               <input
                 type="password"
                 placeholder="Enter your Password"
@@ -50,7 +51,7 @@ const Login = () => {
 
             <p className="font-medium text-[16px] text-white ">
               Don't have an account?{" "}
-              <Link to="/" className="text-[#ECCBA2] ">
+              <Link to="/register" className="text-[#ECCBA2] ">
                 Create an account
               </Link>
             </p>
