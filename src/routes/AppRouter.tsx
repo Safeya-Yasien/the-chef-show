@@ -1,3 +1,4 @@
+import BasicLayout from "@/layouts/BasicLayout";
 import BookingSuccess from "@/pages/BookingSuccess";
 import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
@@ -36,6 +37,12 @@ const router = createBrowserRouter(
           path: "reservation/booking-success",
           element: <BookingSuccess />,
         },
+      ],
+    },
+    {
+      element: <BasicLayout />,
+      errorElement: <Error />,
+      children: [
         {
           path: "login",
           element: <Login />,

@@ -1,4 +1,4 @@
-import carousel1 from "../../assets/images/carousel1.jpg";
+import carousel1 from "../../assets/images/carousel1.webp";
 import carousel2 from "../../assets/images/carousel2.webp";
 import barbecueSteak from "../../assets/images/barbecueSteak.svg";
 
