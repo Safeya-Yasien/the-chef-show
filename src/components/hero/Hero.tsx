@@ -2,8 +2,6 @@ import carousel1 from "../../assets/images/carousel1.jpg";
 import carousel2 from "../../assets/images/carousel2.webp";
 import barbecueSteak from "../../assets/images/barbecueSteak.svg";
 
-import { CustomTitle } from "../shared";
-
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -36,11 +34,25 @@ const Hero = () => {
       <div className="container z-20 relative max-w-[1200px] mx-auto">
         {/* text content */}
         <div className="flex flex-col items-center justify-center gap-[15px] text-center text-white ">
-          <CustomTitle
-            subTitle={"welcome to THE CHEF SHOW"}
-            imgSrc={barbecueSteak}
-            mainTitle="delicious food eating experience"
-          />
+          <div className="flex flex-col items-center justify-center gap-3">
+            <img
+              src={barbecueSteak}
+              alt={"welcome to THE CHEF SHOW"}
+              loading="lazy"
+            />
+            <div className="relative">
+              <p className="uppercase text-[#C19F74] font-medium text-sm">
+                welcome to THE CHEF SHOW
+              </p>
+              <span className="absolute -left-4 top-1/2 -translate-y-1/2 w-[6px] h-[6px] rotate-45 bg-[#C19F74]"></span>
+              <span className="absolute -right-4 top-1/2 -translate-y-1/2 w-[6px] h-[6px] rotate-45 bg-[#C19F74]"></span>
+            </div>
+            <h1
+              className={`text-center font-normal text-[28px] md:text-[36px] lg:text-[48px] leading-7 md:leading-10 lg:leading-[40px] text-white font-restora uppercase`}
+            >
+              delicious food eating experience
+            </h1>
+          </div>
 
           <p className="tracking-[0.04rem] text-[20px] font-normal mb-[20px]">
             we serve food, Harmony, & Laughter Since 1991
