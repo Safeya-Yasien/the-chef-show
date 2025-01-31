@@ -38,7 +38,7 @@ const Login = () => {
                 className="border border-[#C19F74] p-[10px] bg-transparent text-white placeholder-[#6F6F6F] outline-none"
               />
               <Link
-                to="/"
+                to="/forgot-password"
                 className="text-[#ECCBA2] text-right font-semibold text-[16px]"
               >
                 Forgot Password?

@@ -2,11 +2,14 @@ import BasicLayout from "@/layouts/BasicLayout";
 import BookingSuccess from "@/pages/BookingSuccess";
 import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
+import ForgotPassword from "@/pages/ForgotPassword";
 import Home from "@/pages/Home";
 import Login from "@/pages/Login";
 import PastShows from "@/pages/PastShows";
 import Register from "@/pages/Register";
 import Reservation from "@/pages/Reservation";
+import ResetPassword from "@/pages/ResetPassword";
+import VerificationCode from "@/pages/VerificationCode";
 import MainLayout from "@layouts/MainLayout/MainLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -50,6 +53,19 @@ const router = createBrowserRouter(
         {
           path: "register",
           element: <Register />,
+        },
+
+        {
+          path: "forgot-password",
+          element: <ForgotPassword />,
+        },
+        {
+          path: "verification-code",
+          element: <VerificationCode />,
+        },
+        {
+          path: "reset-password",
+          element: <ResetPassword />,
         },
       ],
     },
