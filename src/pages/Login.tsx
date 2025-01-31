@@ -39,7 +39,7 @@ const Login = () => {
               />
               <Link
                 to="/forgot-password"
-                className="text-[#ECCBA2] text-right font-semibold text-[16px]"
+                className="text-[#ECCBA2] text-right font-semibold text-[16px] "
               >
                 Forgot Password?
               </Link>
@@ -49,7 +49,7 @@ const Login = () => {
               Login
             </button>
 
-            <p className="font-medium text-[16px] text-white ">
+            <p className="font-medium text-[16px] text-white mx-auto ">
               Don't have an account?{" "}
               <Link to="/register" className="text-[#ECCBA2] ">
                 Create an account

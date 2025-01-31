@@ -65,7 +65,7 @@ const Register = () => {
               sign up
             </button>
 
-            <p className="font-medium text-[16px] text-white ">
+            <p className="font-medium text-[16px] text-white mx-auto">
               Already have an account?{" "}
               <Link to="/login" className="text-[#ECCBA2] ">
                 Log in
