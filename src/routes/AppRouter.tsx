@@ -2,7 +2,9 @@ import BookingSuccess from "@/pages/BookingSuccess";
 import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
 import Home from "@/pages/Home";
+import Login from "@/pages/Login";
 import PastShows from "@/pages/PastShows";
+import Register from "@/pages/Register";
 import Reservation from "@/pages/Reservation";
 import MainLayout from "@layouts/MainLayout/MainLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -34,17 +36,16 @@ const router = createBrowserRouter(
           path: "reservation/booking-success",
           element: <BookingSuccess />,
         },
+        {
+          path: "login",
+          element: <Login />,
+        },
+        {
+          path: "register",
+          element: <Register />,
+        },
       ],
     },
-    // {
-    //   element: <BasicLayout />,
-    //   children: [
-    //     {
-    //       path: "reservation/booking-success",
-    //       element: <BookingSuccess />,
-    //     },
-    //   ],
-    // },
   ],
   {
     future: {
