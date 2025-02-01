@@ -8,7 +8,7 @@ interface IAuthBannerProps {
 
 const AuthBanner = ({ imageSrc, heading }: IAuthBannerProps) => {
   return (
-    <div className="relative h-full w-full">
+    <div className="relative h-full w-full hidden md:block">
       <img
         src={imageSrc}
         alt=""
@@ -17,7 +17,7 @@ const AuthBanner = ({ imageSrc, heading }: IAuthBannerProps) => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
       {/* Text on top */}
       <div className="absolute inset-0 p-[48px]">

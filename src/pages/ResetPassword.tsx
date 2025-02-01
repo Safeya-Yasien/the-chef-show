@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { AuthBanner } from "@/components";
+import { AuthBanner, WelcomeMessageWidget } from "@/components";
 
 import registerImg from "../assets/images/register.webp";
 import { GoArrowLeft } from "react-icons/go";
@@ -11,14 +11,13 @@ const ResetPassword = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-10 md:gap-12 lg:gap-16 ">
         {/* left side */}
         <div className="flex flex-col justify-center bg-[#131313] text-white">
-          <h1 className=" font-bold text-xl md:text-[24px] lg:text-[36px] uppercase font-restora mb-2 leading-[30px] md:leading-[35px] lg:leading-[45px]">
-            Reset Your Password{" "}
-          </h1>
-          <p className=" font-normal text-sm md:text-[16px] capitalize">
-            For security reasons, this code expires in 2 minutes.{" "}
-          </p>
 
-          <div className="border border-[#525252] my-[40px] " />
+
+          <WelcomeMessageWidget
+            title="Reset Your Password"
+            description="For security reasons, this code expires in 2 minutes."
+          />
+
 
           <form className="flex flex-col gap-6 ">
             <div className="flex flex-col gap-[10px] ">

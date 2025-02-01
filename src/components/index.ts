@@ -9,6 +9,7 @@ import BookingCalendar from "./bookingCalendar/BookingCalendar";
 import ReservationForm from "./reservationForm/ReservationForm";
 import { TimelineDemo } from "./timeline/TimelineDemo";
 import AuthBanner from "./authBanner/AuthBanner"; 
+import WelcomeMessageWidget from "./welcomeMessageWidget/WelcomeMessageWidget";
 
 
 export {
@@ -22,5 +23,5 @@ export {
   BookingCalendar,
   ReservationForm,
   TimelineDemo,
-  AuthBanner
+  AuthBanner,WelcomeMessageWidget
 };
