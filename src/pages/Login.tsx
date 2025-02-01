@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 
 import { AuthBanner, WelcomeMessageWidget } from "@/components";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 
 import loginImg from "../assets/images/loginImg.webp";
 import bgImg from "../assets/images/group.png";
+import { useState } from "react";
 
 const Login = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <div className=" relative z-50 h-screen">
       <div className="container h-full">
@@ -30,20 +34,34 @@ const Login = () => {
                     className="border border-[#C19F74] p-[10px] bg-transparent text-white placeholder-[#6F6F6F] outline-none"
                   />
                 </div>
-                <div className="flex flex-col gap-[10px]">
+                <div className="flex flex-col gap-[10px] relative">
                   <label className="font-light text-[16px]">Password</label>
                   <input
-                    type="password"
+                    type={`${showPassword ? "text" : "password"}`}
                     placeholder="Enter your Password"
                     className="border border-[#C19F74] p-[10px] bg-transparent text-white placeholder-[#6F6F6F] outline-none"
                   />
-                  <Link
-                    to="/forgot-password"
-                    className="text-[#ECCBA2] text-right font-semibold text-[16px] "
+                  <button
+                    type="button"
+                    onClick={() => setShowPassword(!showPassword)}
+                    className="absolute right-4 top-1/2 translate-y-1/2"
+                    aria-label={
+                      showPassword ? "Hide password" : "Show password"
+                    }
                   >
-                    Forgot Password?
-                  </Link>
+                    {showPassword ? (
+                      <AiFillEyeInvisible className="text-white" />
+                    ) : (
+                      <AiFillEye className="text-white" />
+                    )}
+                  </button>
                 </div>
+                <Link
+                  to="/forgot-password"
+                  className="text-[#ECCBA2] text-right font-semibold text-[16px] "
+                >
+                  Forgot Password?
+                </Link>
 
                 <button className="bg-[#ECCBA2] text-black font-medium text-[20px]  flex items-center justify-center h-[58px] ">
                   Login

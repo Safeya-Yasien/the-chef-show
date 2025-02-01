@@ -4,32 +4,49 @@ import { AuthBanner, WelcomeMessageWidget } from "@/components";
 
 import registerImg from "../assets/images/register.webp";
 import { GoArrowLeft } from "react-icons/go";
+import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { useState } from "react";
 
 const ResetPassword = () => {
+  const [showPassword, setShowPassword] = useState(false);
+
   return (
     <div className="container relative z-50 min-h-screen flex items-center">
       <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-10 md:gap-12 lg:gap-16 ">
         {/* left side */}
         <div className="flex flex-col justify-center bg-[#131313] text-white">
-
-
           <WelcomeMessageWidget
             title="Reset Your Password"
             description="For security reasons, this code expires in 2 minutes."
           />
 
-
           <form className="flex flex-col gap-6 ">
-            <div className="flex flex-col gap-[10px] ">
+            {/* password */}
+            <div className="flex flex-col gap-[10px] relative">
               <label className="font-light text-[16px] capitalize ">
                 password
               </label>
               <input
-                type="password"
+                type={`${showPassword ? "text" : "password"}`}
                 placeholder="Enter Your Password"
                 className="border border-[#C19F74] p-[10px] bg-transparent text-white placeholder-[#6F6F6F] outline-none"
               />
+
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-4 top-1/2 translate-y-1/2"
+                aria-label={showPassword ? "Hide password" : "Show password"}
+              >
+                {showPassword ? (
+                  <AiFillEyeInvisible className="text-white" />
+                ) : (
+                  <AiFillEye className="text-white" />
+                )}
+              </button>
             </div>
+
+            {/* confirm password */}
             <div className="flex flex-col gap-[10px] ">
               <label className="font-light text-[16px] capitalize ">
                 confirm password
