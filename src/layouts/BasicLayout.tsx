@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-import bgImg from "../assets/images/group.png";
+// import bgImg from "../assets/images/group.png";
 
 const BasicLayout = () => {
   return (
