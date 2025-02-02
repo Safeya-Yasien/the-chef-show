@@ -17,6 +17,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.5.2",
+    "input-otp": "^1.4.2",
     "lucide-react": "^0.469.0",
     "motion": "^11.18.2",
     "react": "^18.3.1",
