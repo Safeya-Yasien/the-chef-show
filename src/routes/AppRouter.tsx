@@ -1,4 +1,5 @@
 import BasicLayout from "@/layouts/BasicLayout";
+import AccountSetting from "@/pages/AccountSetting";
 import BookingSuccess from "@/pages/BookingSuccess";
 import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
@@ -40,6 +41,11 @@ const router = createBrowserRouter(
           path: "reservation/booking-success",
           element: <BookingSuccess />,
         },
+        {
+          path: "account-setting",
+          element: <AccountSetting />,
+        },
+
       ],
     },
     {
