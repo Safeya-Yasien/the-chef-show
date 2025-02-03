@@ -102,7 +102,7 @@ export function Navbar() {
             id="navbar-sticky"
           >
             {/* links */}
-            <ul className="flex bg-transparent xl:relative gap-[64px] items-center w-auto h-full">
+            <ul className="flex bg-transparent xl:relative gap-[64px] lg:gap-[30px] xl:gap-[64px] items-center w-auto h-full">
               {navLinks.map((link) => (
                 <li key={link.to} className="w-auto h-full">
                   <NavLink to={link.to} closeMenu={closeMenu}>
@@ -112,13 +112,25 @@ export function Navbar() {
               ))}
             </ul>
           </div>
-          <Link
-            to="/reservation"
-            className="text-white bg-[#C19F74] w-[150px] h-[50px] shadow-[4px_4px_10px_0px_#00000014] text-sm font-medium leading-[0.04em]  items-center justify-center hover:bg-[#A88A62] transition-colors hidden lg:flex"
-            aria-label="Go to the reservation page"
-          >
-            RESERVATION
-          </Link>
+
+          <div className="flex items-center gap-6">
+            <Link
+              to="/login"
+              className="uppercase text-white border border-[#C19F74] w-[100px] h-[50px] shadow-[4px_4px_10px_0px_#00000014] text-sm font-medium leading-[0.04em]  items-center justify-center hover:bg-[#A88A62] transition-colors hidden lg:flex"
+              aria-label="Go to the reservation page"
+            >
+              login
+            </Link>
+
+            <Link
+              to="/reservation"
+              className="uppercase text-white bg-[#C19F74] w-[150px] h-[50px] shadow-[4px_4px_10px_0px_#00000014] text-sm font-medium leading-[0.04em]  items-center justify-center hover:bg-[#A88A62] transition-colors hidden lg:flex"
+              aria-label="Go to the reservation page"
+            >
+              RESERVATION
+            </Link>
+          </div>
+
           <div className="flex items-center h-full lg:hidden ">
             {/* Mobile Menu Button (Opens Drawer) */}
             <SheetMenu navLinks={navLinks} />

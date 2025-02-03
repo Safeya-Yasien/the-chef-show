@@ -43,6 +43,17 @@ const SheetMenu = ({ navLinks }: { navLinks: INavLinkProps[] }) => {
               </SheetClose>
             );
           })}
+          <div className="mt-8">
+            <SheetClose asChild>
+              <Link
+                to="/login"
+                className="uppercase text-white border border-[#C19F74] w-full h-[50px] shadow-md text-center text-sm font-medium leading-[0.04em] flex items-center justify-center hover:bg-[#A88A62] transition-colors"
+                aria-label="Go to the login page"
+              >
+                Login
+              </Link>
+            </SheetClose>
+          </div>
         </nav>
         <SheetFooter>
           <SheetClose asChild className=""></SheetClose>
