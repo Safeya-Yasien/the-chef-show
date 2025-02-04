@@ -32,9 +32,6 @@ const TAB_ITEMS = [
   },
 ];
 
-// Tab content component
-
-// Main component
 const AccountSetting = () => {
   const [activeTab, setActiveTab] = useState<Tabs>(Tabs.PersonalInfo);
 
