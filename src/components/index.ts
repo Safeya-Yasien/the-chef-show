@@ -8,9 +8,9 @@ import SectionHeader from "./sectionHeader/SectionHeader";
 import BookingCalendar from "./bookingCalendar/BookingCalendar";
 import ReservationForm from "./reservationForm/ReservationForm";
 import { TimelineDemo } from "./timeline/TimelineDemo";
-import AuthBanner from "./authBanner/AuthBanner"; 
+import AuthBanner from "./authBanner/AuthBanner";
 import WelcomeMessageWidget from "./welcomeMessageWidget/WelcomeMessageWidget";
-
+import AccountTabContent from "./accountTabContent/AccountTabContent";
 
 export {
   Hero,
@@ -23,5 +23,7 @@ export {
   BookingCalendar,
   ReservationForm,
   TimelineDemo,
-  AuthBanner,WelcomeMessageWidget
+  AuthBanner,
+  WelcomeMessageWidget,
+  AccountTabContent,
 };
