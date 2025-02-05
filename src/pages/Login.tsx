@@ -23,7 +23,7 @@ const Login = () => {
                 description="Enjoy exclusive services when you sign in."
               />
 
-              <form className="flex flex-col gap-6 ">
+              <form className="flex flex-col gap-6 relative z-50">
                 <div className="flex flex-col gap-[10px] ">
                   <label className="font-light text-[16px] capitalize ">
                     Email or phone number
