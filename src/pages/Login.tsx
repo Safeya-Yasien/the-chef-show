@@ -25,12 +25,12 @@ const Login = () => {
   };
 
   return (
-    <div className="relative z-50 h-screen">
-      <div className="container h-full">
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full h-full md:gap-8 lg:gap-32 xl:gap-0">
-          {/* Left side */}
-          <div className="relative flex flex-col justify-center bg-[#131313] text-white">
-            <div className="flex flex-col w-full md:w-max md:mx-auto relative z-50">
+    <>
+      {/* Left side */}
+      <div className="relative flex flex-col justify-center bg-[#131313] text-white">
+        <div className="md:mx-auto">
+          <div className="container">
+            <div className="flex flex-col w-full  md:mx-auto relative z-50">
               <WelcomeMessageWidget
                 title="Welcome to The Chef Show!"
                 description="Enjoy exclusive services when you sign in."
@@ -81,41 +81,41 @@ const Login = () => {
                 </p>
               </form>
             </div>
-
-            <div className="h-[100px] w-full absolute top-0 left-0">
-              <img
-                src={bgImg}
-                alt="bg image"
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="h-[100px] w-full absolute bottom-0 left-0">
-              <img
-                src={bgImg}
-                alt="bg image"
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </div>
           </div>
+        </div>
 
-          {/* Right side */}
-          <AuthBanner
-            imageSrc={loginImg}
-            heading={
-              <>
-                Taste
-                <br />
-                the Experience
-                <br />
-                <span className="text-[#C19F74]">log in now!</span>
-              </>
-            }
+        <div className="h-[100px] w-full absolute top-0 left-0">
+          <img
+            src={bgImg}
+            alt="bg image"
+            loading="lazy"
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <div className="h-[100px] w-full absolute bottom-0 left-0">
+          <img
+            src={bgImg}
+            alt="bg image"
+            loading="lazy"
+            className="h-full w-full object-cover"
           />
         </div>
       </div>
-    </div>
+
+      {/* Right side */}
+      <AuthBanner
+        imageSrc={loginImg}
+        heading={
+          <>
+            Taste
+            <br />
+            the Experience
+            <br />
+            <span className="text-[#C19F74]">log in now!</span>
+          </>
+        }
+      />
+    </>
   );
 };
 export default Login;

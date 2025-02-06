@@ -8,16 +8,16 @@ interface IAuthBannerProps {
 
 const AuthBanner = ({ imageSrc, heading }: IAuthBannerProps) => {
   return (
-    <div className="relative h-full w-full hidden md:block py-10">
+    <div className="relative w-full hidden md:block my-10">
       <img
         src={imageSrc}
         alt=""
         loading="lazy"
-        className="h-full object-cover"
+        className="object-cover w-full h-screen"
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-70 top-10 bottom-10"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
       {/* Text on top */}
       <div className="absolute inset-0 p-[48px]">

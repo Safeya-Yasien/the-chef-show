@@ -21,8 +21,10 @@ const BasicLayout = () => {
           backgroundPosition: "bottom",
         }}
       /> */}
-      <div className="">
-        <Outlet />
+      <div className="relative z-50 h-screen overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-full h-full gap-10">
+          <Outlet />
+        </div>
       </div>
     </div>
   );
