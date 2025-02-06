@@ -1,17 +1,34 @@
 import { Link } from "react-router-dom";
 
-import { AuthBanner, WelcomeMessageWidget } from "@/components";
+import { AuthBanner, InputField, WelcomeMessageWidget } from "@/components";
 
 import registerImg from "../assets/images/register.webp";
 import { GoArrowLeft } from "react-icons/go";
-import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { useState } from "react";
 
 import bgImg from "../assets/images/group.png";
+import {
+  ResetPasswordFormData,
+  resetPasswordSchema,
+} from "@/schemas/resetPasswordSchema";
+import { SubmitHandler, useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 
 const ResetPassword = () => {
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword] = useState(false);
 
+  const {
+    register,
+    handleSubmit,
+
+    formState: { errors, isSubmitting },
+  } = useForm<ResetPasswordFormData>({
+    mode: "onBlur",
+    resolver: zodResolver(resetPasswordSchema),
+  });
+  const onSubmit: SubmitHandler<ResetPasswordFormData> = (data) => {
+    console.log("Submitting form:", data);
+  };
   return (
     <div className="relative z-50 h-screen">
       <div className="container h-full">
@@ -24,48 +41,35 @@ const ResetPassword = () => {
                 description="For security reasons, this code expires in 2 minutes."
               />
 
-              <form className="flex flex-col gap-6 relative z-50">
+              <form
+                className="flex flex-col gap-6 relative z-50"
+                onSubmit={handleSubmit(onSubmit)}
+              >
                 {/* password */}
-                <div className="flex flex-col gap-[10px] relative">
-                  <label className="font-light text-[16px] capitalize ">
-                    password
-                  </label>
-                  <input
-                    type={`${showPassword ? "text" : "password"}`}
-                    placeholder="Enter Your Password"
-                    className="border border-[#C19F74] p-[10px] bg-transparent text-white placeholder-[#6F6F6F] outline-none"
-                  />
 
-                  <button
-                    type="button"
-                    onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-4 top-1/2 translate-y-1/2"
-                    aria-label={
-                      showPassword ? "Hide password" : "Show password"
-                    }
-                  >
-                    {showPassword ? (
-                      <AiFillEyeInvisible className="text-white" />
-                    ) : (
-                      <AiFillEye className="text-white" />
-                    )}
-                  </button>
-                </div>
+                <InputField
+                  label="password"
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Enter Your Password"
+                  register={register("password")}
+                  error={errors.password?.message}
+                />
 
                 {/* confirm password */}
-                <div className="flex flex-col gap-[10px] ">
-                  <label className="font-light text-[16px] capitalize ">
-                    confirm password
-                  </label>
-                  <input
-                    type="password"
-                    placeholder="Enter Your Password"
-                    className="border border-[#C19F74] p-[10px] bg-transparent text-white placeholder-[#6F6F6F] outline-none"
-                  />
-                </div>
+                <InputField
+                  label="Confirm Password"
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Confirm Your Password"
+                  register={register("confirmPassword")}
+                  error={errors.confirmPassword?.message}
+                />
 
-                <button className="bg-[#ECCBA2] text-black font-medium text-[20px]  flex items-center justify-center h-[58px]">
-                  Reset Password
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="bg-[#ECCBA2] text-black font-medium text-[20px]  flex items-center justify-center h-[58px]"
+                >
+                  {isSubmitting ? "Resetting..." : "Reset Password"}
                 </button>
 
                 <Link

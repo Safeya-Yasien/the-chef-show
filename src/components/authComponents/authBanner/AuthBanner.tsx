@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import authIcon from "../../assets/images/authIcon.svg";
+import authIcon from "../../../assets/images/authIcon.svg";
 
 interface IAuthBannerProps {
   imageSrc: string;
