@@ -8,7 +8,7 @@ interface IAuthBannerProps {
 
 const AuthBanner = ({ imageSrc, heading }: IAuthBannerProps) => {
   return (
-    <div className="relative w-full hidden md:block my-10">
+    <div className="relative w-full hidden md:block">
       <img
         src={imageSrc}
         alt=""

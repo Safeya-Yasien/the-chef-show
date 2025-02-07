@@ -76,7 +76,7 @@ const VerificationCode = () => {
                   </InputOTPGroup>
                 </InputOTP>
                 {errors.otp1 && (
-                  <p className="text-red-500">{errors.otp1.message}</p>
+                  <p className="text-red-500 -mt-3">{errors.otp1.message}</p>
                 )}
 
                 <button
