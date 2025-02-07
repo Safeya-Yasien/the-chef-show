@@ -1,7 +1,7 @@
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
 import { Label } from "@radix-ui/react-label";
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
 
 const PersonalInfo = () => {
   return (
@@ -106,5 +106,4 @@ const PersonalInfo = () => {
     </Card>
   );
 };
-
 export default PersonalInfo;

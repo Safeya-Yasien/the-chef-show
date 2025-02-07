@@ -6,7 +6,9 @@ import Error from "@/pages/Error";
 import ForgotPassword from "@/pages/ForgotPassword";
 import Home from "@/pages/Home";
 import Login from "@/pages/Login";
+import MyBooking from "@/pages/MyBooking";
 import PastShows from "@/pages/PastShows";
+import PersonalInfo from "@/pages/PersonalInfo";
 import Register from "@/pages/Register";
 import Reservation from "@/pages/Reservation";
 import ResetPassword from "@/pages/ResetPassword";
@@ -42,10 +44,19 @@ const router = createBrowserRouter(
           element: <BookingSuccess />,
         },
         {
-          path: "account-setting",
+          path: "account",
           element: <AccountSetting />,
+          children: [
+            {
+              index: true,
+              element: <PersonalInfo />,
+            },
+            {
+              path: "my-booking",
+              element: <MyBooking />,
+            },
+          ],
         },
-
       ],
     },
     {

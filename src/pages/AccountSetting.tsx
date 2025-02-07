@@ -1,13 +1,12 @@
 import { useState } from "react";
-
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import { RiLogoutBoxLine } from "react-icons/ri";
-import { AccountTabContent } from "@/components";
+import { Link, Outlet } from "react-router-dom";
 
 // Enum for tab identifiers
 export enum Tabs {
-  PersonalInfo = "personal-information",
+  PersonalInfo = "/account",
   MyBooking = "my-booking",
   Logout = "logout",
 }
@@ -19,16 +18,13 @@ const TAB_ITEMS = [
     title: "Account Details",
     description:
       "Update your personal details to keep your account up to date.",
+    icon: <IoSettingsOutline className="w-[40px] h-[40px]" />,
   },
   {
     id: Tabs.MyBooking,
     title: "My Booking",
     description: "View and manage your bookings.",
-  },
-  {
-    id: Tabs.Logout,
-    title: "Logout",
-    description: "Log out of your account.",
+    icon: <FaCalendarAlt className="w-[28px] h-[28px]" />,
   },
 ];
 
@@ -36,9 +32,8 @@ const AccountSetting = () => {
   const [activeTab, setActiveTab] = useState<Tabs>(Tabs.PersonalInfo);
 
   return (
-    <div className="pt-[120px]" id="contact">
-      <div className="container px-[120px] mx-auto">
-        {/* Custom title */}
+    <div className="pt-[168px]" id="contact">
+      <div className="container lg:px-[120px] mx-auto">
         <div className="font-normal font-restora text-white flex flex-col gap-[14px]">
           <h1 className="text-lg md:text-[40px] uppercase">ACCOUNT SETTING</h1>
           <p className="text-[16px]">
@@ -46,7 +41,7 @@ const AccountSetting = () => {
           </p>
         </div>
 
-        {/* Tabs */}
+        {/* Sidebar Navigation */}
         <div className="flex gap-[64px] mt-[64px]">
           <div
             className="flex flex-col h-full bg-transparent border-r border-[#434343]"
@@ -54,32 +49,22 @@ const AccountSetting = () => {
           >
             {TAB_ITEMS.map((tab) => {
               const isActive = activeTab === tab.id;
-
               return (
-                <div
+                <Link
+                  to={tab.id}
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   role="tab"
                   aria-selected={isActive}
                   className={`w-full text-left flex items-start gap-4 h-[112px] cursor-pointer transition-colors p-4 ${
                     isActive
-                      ? "bg-[#2F2C29] border-r border-r-[#ECCBA2]"
+                      ? "bg-[#2F2C29] border-r border-r-[#473117]"
                       : "hover:bg-[#1F1C19]"
                   }`}
                 >
-                  {/* Icon with dynamic color */}
                   <div className={isActive ? "text-[#ECCBA2]" : "text-white"}>
-                    {tab.id === Tabs.PersonalInfo && (
-                      <IoSettingsOutline className="w-[40px] h-[40px]" />
-                    )}
-                    {tab.id === Tabs.MyBooking && (
-                      <FaCalendarAlt className="w-[28px] h-[28px]" />
-                    )}
-                    {tab.id === Tabs.Logout && (
-                      <RiLogoutBoxLine className="w-[28px] h-[28px]" />
-                    )}
+                    {tab.icon}
                   </div>
-
                   <div className="font-restora flex flex-col gap-3">
                     <h2
                       className={`font-normal text-[28px] leading-[28px] ${
@@ -96,14 +81,51 @@ const AccountSetting = () => {
                       {tab.description}
                     </p>
                   </div>
-                </div>
+                </Link>
               );
             })}
+
+            {/* Logout Link (ONLY ONCE, OUTSIDE LOOP) */}
+            <Link
+              to="/"
+              onClick={() => setActiveTab(Tabs.Logout)}
+              role="tab"
+              aria-selected={activeTab === Tabs.Logout}
+              className={`w-full text-left flex items-start gap-4 h-[112px] cursor-pointer transition-colors p-4 ${
+                activeTab === Tabs.Logout
+                  ? "bg-[#2F2C29] border-r border-r-[#473117]"
+                  : "hover:bg-[#1F1C19]"
+              }`}
+            >
+              <div
+                className={
+                  activeTab === Tabs.Logout ? "text-[#ECCBA2]" : "text-white"
+                }
+              >
+                <RiLogoutBoxLine className="w-[28px] h-[28px]" />
+              </div>
+              <div className="font-restora flex flex-col gap-3">
+                <h2
+                  className={`font-normal text-[28px] leading-[28px] ${
+                    activeTab === Tabs.Logout ? "text-[#ECCBA2]" : "text-white"
+                  }`}
+                >
+                  Logout
+                </h2>
+                <p
+                  className={`font-normal text-xs ${
+                    activeTab === Tabs.Logout ? "text-white" : "text-[#939393]"
+                  }`}
+                >
+                  Log out of your account.
+                </p>
+              </div>
+            </Link>
           </div>
 
-          {/* Tab Content */}
+          {/* Content Area */}
           <div className="w-full">
-            <AccountTabContent activeTab={activeTab} />
+            <Outlet />
           </div>
         </div>
       </div>
