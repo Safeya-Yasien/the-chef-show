@@ -8,8 +8,8 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const MyBooking = () => {
   return (
-    <Card className="bg-transparent border-none rounded-none flex flex-col gap-8">
-      <CardHeader className="p-0 flex  flex-row  justify-between">
+    <Card className="bg-transparent border-none rounded-none flex flex-col">
+      <CardHeader className="p-0 flex  flex-row  justify-between mb-8">
         <CardTitle className="font-extralight font-restora text-white text-lg md:text-[32px] leading-8">
           My Booking
           <div className="border-b border-b-[#ECCBA2] w-[130px] pt-3" />

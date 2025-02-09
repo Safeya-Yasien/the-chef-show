@@ -23,7 +23,7 @@ const InputField = ({
 
   return (
     <div className="flex flex-col gap-[10px] relative">
-      <label className="font-light text-[16px] capitalize">{label}</label>
+      <label className="font-light text-[16px] capitalize text-white">{label}</label>
 
       {/* Input Wrapper */}
       <div className="relative">

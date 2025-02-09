@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import { RiLogoutBoxLine } from "react-icons/ri";
@@ -7,8 +7,8 @@ import { Link, Outlet } from "react-router-dom";
 // Enum for tab identifiers
 export enum Tabs {
   PersonalInfo = "/account",
-  MyBooking = "my-booking",
-  Logout = "logout",
+  MyBooking = "/account/my-booking",
+  Logout = "/logout",
 }
 
 // Tab items array
@@ -29,7 +29,8 @@ const TAB_ITEMS = [
 ];
 
 const AccountSetting = () => {
-  const [activeTab, setActiveTab] = useState<Tabs>(Tabs.PersonalInfo);
+  const location = useLocation();
+  const activeTab = location.pathname;
 
   return (
     <div className="pt-[168px]" id="contact">
@@ -53,7 +54,6 @@ const AccountSetting = () => {
                 <Link
                   to={tab.id}
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id)}
                   role="tab"
                   aria-selected={isActive}
                   className={`w-full text-left flex items-start gap-4 h-[112px] cursor-pointer transition-colors p-4 ${
@@ -88,7 +88,6 @@ const AccountSetting = () => {
             {/* Logout Link (ONLY ONCE, OUTSIDE LOOP) */}
             <Link
               to="/"
-              onClick={() => setActiveTab(Tabs.Logout)}
               role="tab"
               aria-selected={activeTab === Tabs.Logout}
               className={`w-full text-left flex items-start gap-4 h-[112px] cursor-pointer transition-colors p-4 ${
