@@ -1,7 +1,7 @@
-import { Tabs } from "@/pages/AccountSetting";
+import { Tabs } from "@/pages/account/AccountSetting";
 import Logout from "./Logout";
-import PersonalInfo from "@/pages/PersonalInfo";
-import MyBooking from "@/pages/MyBooking";
+import PersonalInfo from "@/pages/account/PersonalInfo";
+import MyBooking from "@/pages/account/MyBooking";
 
 const AccountTabContent = ({ activeTab }: { activeTab: Tabs }) => {
   switch (activeTab) {

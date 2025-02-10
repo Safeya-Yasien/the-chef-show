@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 import { AuthBanner, WelcomeMessageWidget } from "@/components";
 
-import registerImg from "../assets/images/register.webp";
+import registerImg from "../../assets/images/register.webp";
 import { GoArrowLeft } from "react-icons/go";
 import {
   InputOTP,
@@ -10,11 +10,12 @@ import {
   InputOTPSlot,
 } from "@/components/ui/input-otp";
 
-import bgImg from "../assets/images/group.png";
+import bgImg from "../../assets/images/group.png";
 
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { OTPFormData, otpSchema } from "@/schemas/otpSchema";
+import BackgroundOverlay from "@/components/authComponents/backgroundOverlay/BackgroundOverlay";
 
 const VerificationCode = () => {
   const {
@@ -101,22 +102,7 @@ const VerificationCode = () => {
               </form>
             </div>
 
-            <div className="h-[100px] w-full absolute top-0 left-0">
-              <img
-                src={bgImg}
-                alt="bg image"
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="h-[100px] w-full absolute bottom-0 left-0">
-              <img
-                src={bgImg}
-                alt="bg image"
-                loading="lazy"
-                className="h-full w-full object-cover"
-              />
-            </div>
+            <BackgroundOverlay bgImg={bgImg} />
           </div>
         </div>
       </div>

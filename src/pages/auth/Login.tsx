@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { AuthBanner, InputField, WelcomeMessageWidget } from "@/components";
-import loginImg from "../assets/images/loginImg.webp";
-import bgImg from "../assets/images/group.png";
+import loginImg from "../../assets/images/loginImg.webp";
+import bgImg from "../../assets/images/group.png";
 import { useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { LoginFormData, loginSchema } from "@/schemas/loginSchema";
+import BackgroundOverlay from "@/components/authComponents/backgroundOverlay/BackgroundOverlay";
 
 const Login = () => {
   const [showPassword] = useState(false);
@@ -84,22 +85,8 @@ const Login = () => {
           </div>
         </div>
 
-        <div className="h-[100px] w-full absolute top-0 left-0">
-          <img
-            src={bgImg}
-            alt="bg image"
-            loading="lazy"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="h-[100px] w-full absolute bottom-0 left-0">
-          <img
-            src={bgImg}
-            alt="bg image"
-            loading="lazy"
-            className="h-full w-full object-cover"
-          />
-        </div>
+        <BackgroundOverlay bgImg={bgImg} />
+
       </div>
 
       {/* Right side */}

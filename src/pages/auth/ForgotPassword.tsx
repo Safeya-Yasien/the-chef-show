@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 
 import { AuthBanner, InputField, WelcomeMessageWidget } from "@/components";
 
-import registerImg from "../assets/images/register.webp";
+import registerImg from "../../assets/images/register.webp";
 import { GoArrowLeft } from "react-icons/go";
 
-import bgImg from "../assets/images/group.png";
+import bgImg from "../../assets/images/group.png";
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -13,6 +13,7 @@ import {
   ForgotPasswordFormData,
   forgotPasswordSchema,
 } from "@/schemas/forgotPasswordSchema";
+import BackgroundOverlay from "@/components/authComponents/backgroundOverlay/BackgroundOverlay";
 
 const ForgotPassword = () => {
   const {
@@ -71,22 +72,8 @@ const ForgotPassword = () => {
           </div>
         </div>
 
-        <div className="h-[100px] w-full absolute top-0 left-0">
-          <img
-            src={bgImg}
-            alt="bg image"
-            loading="lazy"
-            className="h-full w-full object-cover"
-          />
-        </div>
-        <div className="h-[100px] w-full absolute bottom-0 left-0">
-          <img
-            src={bgImg}
-            alt="bg image"
-            loading="lazy"
-            className="h-full w-full object-cover"
-          />
-        </div>
+        <BackgroundOverlay bgImg={bgImg} />
+
       </div>
 
       {/* right side */}

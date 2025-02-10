@@ -1,18 +1,18 @@
 import BasicLayout from "@/layouts/BasicLayout";
-import AccountSetting from "@/pages/AccountSetting";
+import AccountSetting from "@/pages/account/AccountSetting";
 import BookingSuccess from "@/pages/BookingSuccess";
 import Contact from "@/pages/Contact";
 import Error from "@/pages/Error";
-import ForgotPassword from "@/pages/ForgotPassword";
+import ForgotPassword from "@/pages/auth/ForgotPassword";
 import Home from "@/pages/Home";
-import Login from "@/pages/Login";
-import MyBooking from "@/pages/MyBooking";
+import Login from "@/pages/auth/Login";
+import MyBooking from "@/pages/account/MyBooking";
 import PastShows from "@/pages/PastShows";
-import PersonalInfo from "@/pages/PersonalInfo";
-import Register from "@/pages/Register";
+import PersonalInfo from "@/pages/account/PersonalInfo";
+import Register from "@/pages/auth/Register";
 import Reservation from "@/pages/Reservation";
-import ResetPassword from "@/pages/ResetPassword";
-import VerificationCode from "@/pages/VerificationCode";
+import ResetPassword from "@/pages/auth/ResetPassword";
+import VerificationCode from "@/pages/auth/VerificationCode";
 import MainLayout from "@layouts/MainLayout/MainLayout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 

@@ -2,17 +2,18 @@ import { Link } from "react-router-dom";
 
 import { AuthBanner, InputField, WelcomeMessageWidget } from "@/components";
 
-import registerImg from "../assets/images/register.webp";
+import registerImg from "../../assets/images/register.webp";
 import { GoArrowLeft } from "react-icons/go";
 import { useState } from "react";
 
-import bgImg from "../assets/images/group.png";
+import bgImg from "../../assets/images/group.png";
 import {
   ResetPasswordFormData,
   resetPasswordSchema,
 } from "@/schemas/resetPasswordSchema";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import BackgroundOverlay from "@/components/authComponents/backgroundOverlay/BackgroundOverlay";
 
 const ResetPassword = () => {
   const [showPassword] = useState(false);
@@ -82,22 +83,8 @@ const ResetPassword = () => {
             </div>
           </div>
 
-          <div className="h-[100px] w-full absolute top-0 left-0">
-            <img
-              src={bgImg}
-              alt="bg image"
-              loading="lazy"
-              className="h-full w-full object-cover"
-            />
-          </div>
-          <div className="h-[100px] w-full absolute bottom-0 left-0">
-            <img
-              src={bgImg}
-              alt="bg image"
-              loading="lazy"
-              className="h-full w-full object-cover"
-            />
-          </div>
+          <BackgroundOverlay bgImg={bgImg} />
+
         </div>
       </div>
 
