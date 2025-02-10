@@ -14,26 +14,25 @@ import bgImg from "../../assets/images/group.png";
 
 import { useForm, SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { OTPFormData, otpSchema } from "@/schemas/otpSchema";
 import BackgroundOverlay from "@/components/authComponents/backgroundOverlay/BackgroundOverlay";
+import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
+import { z } from "zod";
+
+const FormSchema = z.object({
+  pin: z.string().min(4),
+});
 
 const VerificationCode = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting },
-  } = useForm<OTPFormData>({
-    mode: "onBlur",
-    resolver: zodResolver(otpSchema),
+  const form = useForm<z.infer<typeof FormSchema>>({
+    resolver: zodResolver(FormSchema),
+    defaultValues: {
+      pin: "",
+    },
   });
 
-  const onSubmit: SubmitHandler<OTPFormData> = (data) => {
-    console.log("🚀 Form Submitted!");
-    const otpString = data.otp1 + data.otp2 + data.otp3 + data.otp4;
-    console.log("Submitting OTP:", otpString);
+  const onSubmit: SubmitHandler<z.infer<typeof FormSchema>> = (data) => {
+    console.log(data);
   };
-
-  console.log("Validation Errors:", errors);
 
   return (
     <>
@@ -47,49 +46,51 @@ const VerificationCode = () => {
                 description="For security reasons, this code expires in 2 minutes."
               />
 
-              <form
-                className="flex flex-col gap-6 relative z-50 mb-7"
-                onSubmit={handleSubmit(onSubmit)}
-              >
-                <InputOTP maxLength={4} className="">
-                  <InputOTPGroup className="flex gap-3">
-                    <InputOTPSlot
-                      className="border border-[#C19F74] w-[80px] sm:w-[125px] md:w-[80px] h-[80px] sm:h-[100px] md:h-[80px] bg-transparent text-white font-bold text-[56px] text-center !rounded-none"
-                      index={0}
-                      placeholder="0"
-                      {...register("otp1", { required: "OTP is required" })}
-                    />
-                    <InputOTPSlot
-                      className="border border-[#C19F74] w-[80px] sm:w-[125px] md:w-[80px] h-[80px] sm:h-[100px] md:h-[80px] bg-transparent text-white font-bold text-[56px] text-center !rounded-none"
-                      index={1}
-                      placeholder="0"
-                      {...register("otp2")}
-                    />
-                    <InputOTPSlot
-                      className="border border-[#C19F74] w-[80px] sm:w-[125px] md:w-[80px] h-[80px] sm:h-[100px] md:h-[80px] bg-transparent text-white font-bold text-[56px] text-center !rounded-none"
-                      index={2}
-                      placeholder="0"
-                      {...register("otp3")}
-                    />
-                    <InputOTPSlot
-                      className="border border-[#C19F74] w-[80px] sm:w-[125px] md:w-[80px] h-[80px] sm:h-[100px] md:h-[80px] bg-transparent text-white font-bold text-[56px] text-center !rounded-none"
-                      index={3}
-                      placeholder="0"
-                      {...register("otp4")}
-                    />
-                  </InputOTPGroup>
-                </InputOTP>
-                {errors.otp1 && (
-                  <p className="text-red-500 -mt-3">{errors.otp1.message}</p>
-                )}
-
-                <button
-                  type="submit"
-                  className="bg-[#ECCBA2] text-black font-medium text-[20px]  flex items-center justify-center h-[58px]"
+              <Form {...form}>
+                <form
+                  className="flex flex-col gap-6 relative z-50 mb-7"
+                  onSubmit={form.handleSubmit(onSubmit)}
                 >
-                  {isSubmitting ? "Verifying..." : "Continue"}
-                </button>
-              </form>
+                  <FormField
+                    control={form.control}
+                    name="pin"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormControl>
+                          <InputOTP maxLength={4} {...field}>
+                            <InputOTPGroup className="flex gap-3">
+                              <InputOTPSlot
+                                index={0}
+                                aria-placeholder="0"
+                                className="border border-[#C19F74] w-[80px] sm:w-[125px] md:w-[80px] h-[80px] sm:h-[100px] md:h-[80px] bg-transparent text-white font-bold text-[56px] text-center !rounded-none placeholder-gray-500"
+                              />
+                              <InputOTPSlot
+                                index={1}
+                                className="border border-[#C19F74] w-[80px] sm:w-[125px] md:w-[80px] h-[80px] sm:h-[100px] md:h-[80px] bg-transparent text-white font-bold text-[56px] text-center !rounded-none"
+                              />
+                              <InputOTPSlot
+                                index={2}
+                                className="border border-[#C19F74] w-[80px] sm:w-[125px] md:w-[80px] h-[80px] sm:h-[100px] md:h-[80px] bg-transparent text-white font-bold text-[56px] text-center !rounded-none"
+                              />
+                              <InputOTPSlot
+                                index={3}
+                                className="border border-[#C19F74] w-[80px] sm:w-[125px] md:w-[80px] h-[80px] sm:h-[100px] md:h-[80px] bg-transparent text-white font-bold text-[56px] text-center !rounded-none"
+                              />
+                            </InputOTPGroup>
+                          </InputOTP>
+                        </FormControl>
+                      </FormItem>
+                    )}
+                  />
+                  <button
+                    type="submit"
+                    className="bg-[#ECCBA2] text-black font-medium text-[20px]  flex items-center justify-center h-[58px]"
+                  >
+                    {/* {isSubmitting ? "Verifying..." : "Continue"} */}
+                    Continue{" "}
+                  </button>
+                </form>
+              </Form>
 
               <p className="font-medium text-[16px] text-white mx-auto mb-3">
                 Didn't receive the email?{" "}
