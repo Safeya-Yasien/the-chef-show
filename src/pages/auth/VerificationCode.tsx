@@ -28,9 +28,12 @@ const VerificationCode = () => {
   });
 
   const onSubmit: SubmitHandler<OTPFormData> = (data) => {
+    console.log("🚀 Form Submitted!");
     const otpString = data.otp1 + data.otp2 + data.otp3 + data.otp4;
     console.log("Submitting OTP:", otpString);
   };
+
+  console.log("Validation Errors:", errors);
 
   return (
     <>
@@ -45,7 +48,7 @@ const VerificationCode = () => {
               />
 
               <form
-                className="flex flex-col gap-6 relative z-50"
+                className="flex flex-col gap-6 relative z-50 mb-7"
                 onSubmit={handleSubmit(onSubmit)}
               >
                 <InputOTP maxLength={4} className="">
@@ -54,7 +57,7 @@ const VerificationCode = () => {
                       className="border border-[#C19F74] w-[80px] sm:w-[125px] md:w-[80px] h-[80px] sm:h-[100px] md:h-[80px] bg-transparent text-white font-bold text-[56px] text-center !rounded-none"
                       index={0}
                       placeholder="0"
-                      {...register("otp1")}
+                      {...register("otp1", { required: "OTP is required" })}
                     />
                     <InputOTPSlot
                       className="border border-[#C19F74] w-[80px] sm:w-[125px] md:w-[80px] h-[80px] sm:h-[100px] md:h-[80px] bg-transparent text-white font-bold text-[56px] text-center !rounded-none"
@@ -86,20 +89,20 @@ const VerificationCode = () => {
                 >
                   {isSubmitting ? "Verifying..." : "Continue"}
                 </button>
-
-                <p className="font-medium text-[16px] text-white mx-auto">
-                  Didn't receive the email?{" "}
-                  <button className="text-[#ECCBA2] underline">
-                    Click to resend
-                  </button>
-                </p>
-                <Link
-                  to="/login"
-                  className="font-medium text-[16px] text-white flex items-center gap-2 text-center mx-auto"
-                >
-                  <GoArrowLeft /> Back to Login
-                </Link>
               </form>
+
+              <p className="font-medium text-[16px] text-white mx-auto mb-3">
+                Didn't receive the email?{" "}
+                <button className="text-[#ECCBA2] underline">
+                  Click to resend
+                </button>
+              </p>
+              <Link
+                to="/login"
+                className="font-medium text-[16px] text-white flex items-center gap-2 text-center mx-auto"
+              >
+                <GoArrowLeft /> Back to Login
+              </Link>
             </div>
 
             <BackgroundOverlay bgImg={bgImg} />
