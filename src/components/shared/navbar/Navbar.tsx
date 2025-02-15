@@ -70,7 +70,7 @@ export function Navbar() {
 
   return (
     <header
-      className={` fixed w-full top-0 left-0 z-50 h-[88px] 
+      className={`fixed w-full top-0 left-0 z-50 h-[88px] 
     transition-all duration-300
     ${location.pathname === "/" ? "border-b-[0.5px] border-b-[#ffffff1f]" : ""}
     ${

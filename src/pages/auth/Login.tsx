@@ -21,7 +21,6 @@ const Login = () => {
     resolver: zodResolver(loginSchema),
   });
   const onSubmit: SubmitHandler<LoginFormData> = (data) => {
-    // Perform authentication logic here
     console.log("Submitting form:", data);
   };
 
@@ -86,7 +85,6 @@ const Login = () => {
         </div>
 
         <BackgroundOverlay bgImg={bgImg} />
-
       </div>
 
       {/* Right side */}
