@@ -1,20 +1,30 @@
-import BasicLayout from "@/layouts/BasicLayout";
-import AccountSetting from "@/pages/account/AccountSetting";
-import BookingSuccess from "@/pages/BookingSuccess";
-import Contact from "@/pages/Contact";
-import Error from "@/pages/Error";
-import ForgotPassword from "@/pages/auth/ForgotPassword";
-import Home from "@/pages/Home";
-import Login from "@/pages/auth/Login";
-import MyBooking from "@/pages/account/MyBooking";
-import PastShows from "@/pages/PastShows";
-import PersonalInfo from "@/pages/account/PersonalInfo";
-import Register from "@/pages/auth/Register";
-import Reservation from "@/pages/Reservation";
-import ResetPassword from "@/pages/auth/ResetPassword";
-import VerificationCode from "@/pages/auth/VerificationCode";
-import MainLayout from "@layouts/MainLayout/MainLayout";
+import { lazy } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const Home = lazy(() => import("@/pages/Home"));
+const Reservation = lazy(() => import("@/pages/Reservation"));
+const Contact = lazy(() => import("@/pages/Contact"));
+const PastShows = lazy(() => import("@/pages/PastShows"));
+const BookingSuccess = lazy(() => import("@/pages/BookingSuccess"));
+
+// Auth
+const Login = lazy(() => import("@/pages/auth/Login"));
+const Register = lazy(() => import("@/pages/auth/Register"));
+const ForgotPassword = lazy(() => import("@/pages/auth/ForgotPassword"));
+const VerificationCode = lazy(() => import("@/pages/auth/VerificationCode"));
+const ResetPassword = lazy(() => import("@/pages/auth/ResetPassword"));
+
+// Account
+const AccountSetting = lazy(() => import("@/pages/account/AccountSetting"));
+const PersonalInfo = lazy(() => import("@/pages/account/PersonalInfo"));
+const MyBooking = lazy(() => import("@/pages/account/MyBooking"));
+
+import Error from "@/pages/Error";
+import RequireAuth from "@/components/authComponents/requireAuth/RequireAuth";
+
+// Layouts
+const BasicLayout = lazy(() => import("@/layouts/BasicLayout"));
+const MainLayout = lazy(() => import("@/layouts/MainLayout/MainLayout"));
 
 const router = createBrowserRouter(
   [
@@ -45,7 +55,11 @@ const router = createBrowserRouter(
         },
         {
           path: "account",
-          element: <AccountSetting />,
+          element: (
+            <RequireAuth>
+              <AccountSetting />
+            </RequireAuth>
+          ),
           children: [
             {
               index: true,
