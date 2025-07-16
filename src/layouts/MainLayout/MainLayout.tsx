@@ -1,5 +1,6 @@
-import { Navbar, Footer, ScrollToTop } from "@/components/shared";
 import { Outlet } from "react-router-dom";
+
+import { Navbar, Footer, ScrollToTop } from "@/components/shared";
 
 const MainLayout = () => {
   return (

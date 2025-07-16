@@ -95,7 +95,7 @@ const router = createBrowserRouter(
       v7_relativeSplatPath: true,
       v7_skipActionErrorRevalidation: true,
     },
-  }
+  },
 );
 
 const AppRouter = () => {
