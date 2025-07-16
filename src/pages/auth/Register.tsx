@@ -1,16 +1,16 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
-
-import { AuthBanner, InputField, WelcomeMessageWidget } from "@/components";
-
-import registerImg from "../../assets/images/register.webp";
 import { useEffect, useState } from "react";
-
-import bgImg from "../../assets/images/group.png";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { RegisterFormData, registerSchema } from "@/schemas/registerSchema";
-import BackgroundOverlay from "@/components/authComponents/backgroundOverlay/BackgroundOverlay";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
 import { addRegisteredEmail } from "@/utils/authStorage";
+import { RegisterFormData, registerSchema } from "@/schemas/registerSchema";
+
+import { AuthBanner, InputField, WelcomeMessageWidget } from "@/components";
+import BackgroundOverlay from "@/components/authComponents/backgroundOverlay/BackgroundOverlay";
+
+import registerImg from "../../assets/images/register.webp";
+import bgImg from "../../assets/images/group.png";
 const Register = () => {
   const [showPassword] = useState(false);
   const location = useLocation();

@@ -1,14 +1,19 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthBanner, InputField, WelcomeMessageWidget } from "@/components";
-import loginImg from "../../assets/images/loginImg.webp";
-import bgImg from "../../assets/images/group.png";
 import { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { LoginFormData, loginSchema } from "@/schemas/loginSchema";
+
+import { AuthBanner, InputField, WelcomeMessageWidget } from "@/components";
 import BackgroundOverlay from "@/components/authComponents/backgroundOverlay/BackgroundOverlay";
-import { useAuth } from "@/context/useAuth";
+
 import { checkEmailExists } from "@/utils/authStorage";
+import { LoginFormData, loginSchema } from "@/schemas/loginSchema";
+
+import { useAuth } from "@/context/useAuth";
+
+import bgImg from "../../assets/images/group.png";
+import loginImg from "../../assets/images/loginImg.webp";
 
 const Login = () => {
   const [showPassword] = useState(false);
