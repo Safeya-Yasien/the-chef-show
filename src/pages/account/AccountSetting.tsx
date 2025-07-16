@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { FaCalendarAlt } from "react-icons/fa";
 import { IoSettingsOutline } from "react-icons/io5";
 import { RiLogoutBoxLine } from "react-icons/ri";
 import { Link, Outlet } from "react-router-dom";
-import {  IoMdClose } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
+import { useAuth } from "@/context/useAuth";
 
 export enum Tabs {
   PersonalInfo = "/account",
@@ -29,9 +30,16 @@ const TAB_ITEMS = [
 ];
 
 const AccountSetting = () => {
+  const navigate = useNavigate();
   const location = useLocation();
   const activeTab = location.pathname;
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const { logout } = useAuth();
+
+  const handleLogout = () => {
+    logout();
+    navigate("/");
+  };
 
   return (
     <div className="pt-[168px]" id="contact">
@@ -108,6 +116,7 @@ const AccountSetting = () => {
                   ? "bg-[#2F2C29] border-r border-r-[#473117]"
                   : "hover:bg-[#1F1C19]"
               }`}
+              onClick={handleLogout}
             >
               <div
                 className={
@@ -200,7 +209,10 @@ const AccountSetting = () => {
                     ? "bg-[#2F2C29] border-r border-r-[#473117]"
                     : "hover:bg-[#1F1C19]"
                 }`}
-                onClick={() => setIsDrawerOpen(false)}
+                onClick={() => {
+                  setIsDrawerOpen(false);
+                  handleLogout();
+                }}
               >
                 <RiLogoutBoxLine className="w-[28px] h-[28px]" />
                 <h2 className="text-lg text-white">Logout</h2>

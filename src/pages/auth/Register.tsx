@@ -1,29 +1,40 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { AuthBanner, InputField, WelcomeMessageWidget } from "@/components";
 
 import registerImg from "../../assets/images/register.webp";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import bgImg from "../../assets/images/group.png";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { RegisterFormData, registerSchema } from "@/schemas/registerSchema";
 import BackgroundOverlay from "@/components/authComponents/backgroundOverlay/BackgroundOverlay";
+import { addRegisteredEmail } from "@/utils/authStorage";
 const Register = () => {
   const [showPassword] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const {
     register,
     handleSubmit,
-
+    setValue,
     formState: { errors, isSubmitting },
   } = useForm<RegisterFormData>({
     mode: "onBlur",
     resolver: zodResolver(registerSchema),
   });
+
+  useEffect(() => {
+    if (location.state?.email) {
+      setValue("email", location.state.email);
+    }
+  }, [location.state, setValue]);
+
   const onSubmit: SubmitHandler<RegisterFormData> = (data) => {
-    console.log("Submitting form:", data);
+    addRegisteredEmail(data.email);
+    navigate("/login", { state: { email: data.email } });
   };
 
   return (
@@ -91,7 +102,6 @@ const Register = () => {
             </div>
 
             <BackgroundOverlay bgImg={bgImg} />
-
           </div>
         </div>
       </div>

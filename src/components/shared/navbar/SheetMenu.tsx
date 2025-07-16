@@ -9,6 +9,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { useAuth } from "@/context/useAuth";
+import { useCurrentUser } from "@/context/useCurrentUser";
 
 interface INavLinkProps {
   to: string;
@@ -17,6 +19,8 @@ interface INavLinkProps {
 
 const SheetMenu = ({ navLinks }: { navLinks: INavLinkProps[] }) => {
   const location = useLocation();
+  const { isAuthenticated } = useAuth();
+  const { username } = useCurrentUser();
 
   return (
     <Sheet>
@@ -44,15 +48,27 @@ const SheetMenu = ({ navLinks }: { navLinks: INavLinkProps[] }) => {
             );
           })}
           <div className="mt-8">
-            <SheetClose asChild>
-              <Link
-                to="/login"
-                className="uppercase text-white border border-[#C19F74] w-full h-[50px] shadow-md text-center text-sm font-medium leading-[0.04em] flex items-center justify-center hover:bg-[#A88A62] transition-colors"
-                aria-label="Go to the login page"
-              >
-                Login
-              </Link>
-            </SheetClose>
+            {isAuthenticated ? (
+              <SheetClose asChild>
+                <Link
+                  to="/account"
+                  className="uppercase text-white border border-[#C19F74] w-full h-[50px] shadow-md text-center text-sm font-medium leading-[0.04em] flex items-center justify-center hover:bg-[#A88A62] transition-colors"
+                  aria-label="Go to your account"
+                >
+                  {username}
+                </Link>
+              </SheetClose>
+            ) : (
+              <SheetClose asChild>
+                <Link
+                  to="/login"
+                  className="uppercase text-white border border-[#C19F74] w-full h-[50px] shadow-md text-center text-sm font-medium leading-[0.04em] flex items-center justify-center hover:bg-[#A88A62] transition-colors"
+                  aria-label="Go to the login page"
+                >
+                  Login
+                </Link>
+              </SheetClose>
+            )}
           </div>
         </nav>
         <SheetFooter>

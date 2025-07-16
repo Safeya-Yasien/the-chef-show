@@ -1,27 +1,47 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthBanner, InputField, WelcomeMessageWidget } from "@/components";
 import loginImg from "../../assets/images/loginImg.webp";
 import bgImg from "../../assets/images/group.png";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { LoginFormData, loginSchema } from "@/schemas/loginSchema";
 import BackgroundOverlay from "@/components/authComponents/backgroundOverlay/BackgroundOverlay";
+import { useAuth } from "@/context/useAuth";
+import { checkEmailExists } from "@/utils/authStorage";
 
 const Login = () => {
   const [showPassword] = useState(false);
+  const { login, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const {
     register,
     handleSubmit,
-
+    setValue,
     formState: { errors, isSubmitting },
   } = useForm<LoginFormData>({
     mode: "onBlur",
     resolver: zodResolver(loginSchema),
   });
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/");
+    }
+    if (location.state?.email) {
+      setValue("email", location.state.email);
+    }
+  }, [isAuthenticated, navigate, location, setValue]);
+
   const onSubmit: SubmitHandler<LoginFormData> = (data) => {
-    console.log("Submitting form:", data);
+    if (!checkEmailExists(data.email)) {
+      navigate("/register", { state: { email: data.email } });
+      return;
+    }
+    login();
+    navigate("/");
   };
 
   return (

@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 import SheetMenu from "./SheetMenu";
+import { useAuth } from "@/context/useAuth";
+import { useCurrentUser } from "@/context/useCurrentUser";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -41,6 +43,9 @@ const NavLink: React.FC<INavLinkProps> = ({ to, children, closeMenu }) => {
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const { isAuthenticated } = useAuth();
+  const { username } = useCurrentUser();
 
   const closeMenu = () => {
     setIsMenuOpen(false);
@@ -114,13 +119,22 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-6">
-            <Link
-              to="/login"
-              className="uppercase text-white border border-[#C19F74] w-[100px] h-[50px] shadow-[4px_4px_10px_0px_#00000014] text-sm font-medium leading-[0.04em]  items-center justify-center hover:bg-[#A88A62] transition-colors hidden lg:flex"
-              aria-label="Go to the reservation page"
-            >
-              login
-            </Link>
+            {isAuthenticated ? (
+              <Link
+                to={"/account"}
+                className="hidden lg:flex items-center cursor-pointer text-white uppercase transition-colors rounded-full "
+              >
+                <span className=" font-semibold text-lg">{username}</span>
+              </Link>
+            ) : (
+              <Link
+                to="/login"
+                className="uppercase text-white border border-[#C19F74] w-[100px] h-[50px] shadow-[4px_4px_10px_0px_#00000014] text-sm font-medium leading-[0.04em]  items-center justify-center hover:bg-[#A88A62] transition-colors hidden lg:flex"
+                aria-label="Go to the reservation page"
+              >
+                login
+              </Link>
+            )}
 
             <Link
               to="/reservation"
